@@ -5,6 +5,7 @@ import { GroundBounce } from '../materials/GroundBounce.js';
 
 // Binds the Tidewater UI (panel + HUD) to the running app.
 const SEA = {
+	Crescent: { wind: 5.5, fetch: 80, chop: 0.72, swell: 0.34, surf: 0.24, period: 10, whitecaps: 0.5 },
 	Calm: { wind: 3.5, fetch: 40, chop: 0.75, swell: 0.28, surf: 0.18, period: 11, whitecaps: 0.2 },
 	Breezy: { wind: 7, fetch: 120, chop: 0.9, swell: 0.48, surf: 0.34, period: 9, whitecaps: 0.5 },
 	Choppy: { wind: 12, fetch: 300, chop: 1.05, swell: 0.68, surf: 0.56, period: 8.5, whitecaps: 0.75 },
@@ -19,6 +20,7 @@ export class AppUI {
 		this.ui = ui;
 		const fft = app.fft;
 		const shore = app.shore;
+		const baseExposure = app.settings.exposure;
 
 		// ---- plain values the controls bind to; onChange pushes them into the simulation
 		const s = this.s = {
@@ -89,7 +91,7 @@ export class AppUI {
 		const ocean = ui.addTab( 'ocean', 'Ocean', 'ocean' );
 		const sea = ocean.addFolder( 'Sea state', { icon: 'wind' } );
 		sea.addPresets( {
-			label: 'Conditions', active: 'Breezy',
+			label: 'Conditions', active: 'Crescent',
 			presets: Object.keys( SEA ).map( ( k ) => ( {
 				label: k, icon: k.toLowerCase(),
 				apply: () => {
@@ -182,7 +184,7 @@ export class AppUI {
 
 		}
 
-		atmo.addSlider( { label: 'Exposure', object: s, key: 'exposure', min: - 3, max: 3, step: 0.1, unit: 'EV', onChange: ( v ) => { app.settings.exposure = 0.55 * Math.pow( 2, v ); } } );
+		atmo.addSlider( { label: 'Exposure', object: s, key: 'exposure', min: - 3, max: 3, step: 0.1, unit: 'EV', onChange: ( v ) => { app.settings.exposure = baseExposure * Math.pow( 2, v ); } } );
 
 		// ---------------------------------------------------------------- Camera
 		const cam = ui.addTab( 'camera', 'Camera', 'camera' );

@@ -1,0 +1,11 @@
+:root { --island-ivory: #f4eddb; }
+.is-exploration .tw-start-title { font-family: "Microsoft YaHei", sans-serif; font-weight: 400; letter-spacing: .35em; margin-left: .35em; }
+.island-subtitle { color: #ddd8c9; font-size: 12px; letter-spacing: .2em; margin: 14px 0 28px; }
+.is-exploration .tw-start-cta { background: #e4ce99; color: #182e2c; box-shadow: 0 5px 32px #0b232944; }
+.is-exploration .tw-brand-name { font-size: 11px; letter-spacing: .2em; }
+.is-exploration .tw-stats { opacity: .7; }
+.is-exploration .tw-help-guide a { color: #e4ce99; white-space: nowrap; }
+.island-home { position: absolute; bottom: 24px; left: 24px; color: var(--island-ivory); background: #152e35b8; border: 1px solid #f4eddb33; border-radius: 24px; padding: 9px 16px; cursor: pointer; pointer-events: auto; font: 12px "Microsoft YaHei", sans-serif; }
+.is-exploration.is-starting .island-home, .is-exploration.is-photo .island-home { display: none; }
+.island-home:focus-visible { outline: 2px solid #e4ce99; outline-offset: 4px; }
+@media (max-width: 700px) { .island-subtitle { font-size: 10px; } .island-home { left: 12px; bottom: 12px; } }

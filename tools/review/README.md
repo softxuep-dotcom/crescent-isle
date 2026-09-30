@@ -46,4 +46,18 @@ This creates a tiny localhost page with the same separate browser configuration.
 
 The initial baseline and stage1 runs were captured before the camera-reset correction. Their original loading and performance reports remain unchanged; replacement comparison images are in the separate `baseline-capture-reset` and `stage1-capture-reset` review outputs. Subsequent normal runs include the reset automatically. The initially observed lone 404 console message was traced to `/favicon.ico`, not a missing scene asset.
 
+## Final exploration interaction smoke
+
+After the final UI is connected and no performance review is running:
+
+```powershell
+node tools/review/explore-smoke.mjs --out E:/test/3Dmodel/output/crescent-review/final-smoke
+```
+
+This uses only the local fork on port 5191 (dev) or 5192 (production preview) in normal play mode, clicks the Chinese start button, tests native pointer lock, holds W for 60 real game frames, toggles F twice, presses Home, opens/closes settings with H and the guide with F1, and follows the credits link into its new tab. It asserts actual player position and UI state; it does not set player position or input flags to make movement pass. Pointer lock denial is explicitly recorded as a headless limitation, not claimed as success. Pass `--url http://127.0.0.1:5192/` to check the built app; composition capture is automatically omitted there because production does not expose source modules.
+
+The smoke also presses Home while the UI exists but the app is still initializing, recording whether the player had been constructed. A separately labelled helm-return regression calls the actual `player.takeHelm()` method, uses W to increase throttle, then presses Home and checks `driven === false`, zero throttle and walking mode. This is a state regression, not a claim of testing real navigation to or boarding the boat.
+
+The smoke saves start, walking, settings, guide and credits screenshots. Two additional scene compositions (entrance toward sea and a three-cabin overview) have their own camera manifest and `compositions/` directory, separate from the four fixed stage-comparison views. `--skip-compositions` omits them. These composition screenshots come from the normally generated live scene; they are not claimed as a seeded pixel-by-pixel stage comparison.
+
 The cold-profile figure is not an OS/driver cache reset and is not an Internet download benchmark. Headless Chromium may differ from the user's visible browser; do not claim these numbers describe physical monitor presentation or all hardware. A missing asset, failed request, or shader warning must be reviewed alongside the image; `success` only means the harness completed, not that the scene has no defects.

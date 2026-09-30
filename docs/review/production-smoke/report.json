@@ -1,0 +1,345 @@
+{
+  "capturedAt": "2026-09-30T09:00:11.819Z",
+  "url": "http://127.0.0.1:5192/?scale=1",
+  "method": "New isolated headless Chrome profile; actual pointer and keyboard inputs drive the normal running app. State is read for assertions except a separately labelled helm-return regression that calls the real takeHelm() method directly (not a boarding test). Composition images at the end use separate explicit review cameras and are not stage-comparison images.",
+  "checks": [
+    {
+      "name": "Home during initialization causes no exception",
+      "status": "pass",
+      "event": {
+        "ms": 236.2999999821186,
+        "hasUI": true,
+        "hasPlayer": false,
+        "appReady": false,
+        "loadingStatus": "Starting WebGPU…"
+      }
+    },
+    {
+      "name": "Chinese start screen",
+      "status": "pass",
+      "title": "月湾岛",
+      "startText": "开始漫游"
+    },
+    {
+      "name": "ExplorationUI bound to app",
+      "status": "pass"
+    },
+    {
+      "name": "Fishing/economy Game not constructed",
+      "status": "pass"
+    },
+    {
+      "name": "Start click enters exploration",
+      "status": "pass"
+    },
+    {
+      "name": "Native pointer lock",
+      "status": "limited",
+      "acquired": false,
+      "errors": [
+        {
+          "ms": 15328.899999976158,
+          "message": "pointerlockerror"
+        }
+      ],
+      "note": "Headless browser did not grant pointer lock; keyboard movement is still tested independently. Mouse-look lock remains unverified in a visible browser."
+    },
+    {
+      "name": "W moves the walking player",
+      "status": "pass",
+      "displacementMeters": 2.970245526449901,
+      "before": {
+        "playerPosition": [
+          -54,
+          3.04665140131064,
+          -85
+        ],
+        "cameraPosition": [
+          -54,
+          4.66665140131064,
+          -85
+        ],
+        "yaw": 3.141592653589793,
+        "pitch": -0.05,
+        "mode": "walk",
+        "freeCam": false,
+        "frame": 104,
+        "pointerLocked": false,
+        "inputLocked": false,
+        "uiBound": true,
+        "gamePresent": false,
+        "boatDriven": false,
+        "boatThrottle": 0,
+        "startOpen": false,
+        "helpOpen": false,
+        "panelOpen": false
+      },
+      "after": {
+        "playerPosition": [
+          -54,
+          2.910263828575014,
+          -82.0297544735501
+        ],
+        "cameraPosition": [
+          -54,
+          4.556452199510092,
+          -82.0297544735501
+        ],
+        "yaw": 3.141592653589793,
+        "pitch": -0.05,
+        "mode": "walk",
+        "freeCam": false,
+        "frame": 172,
+        "pointerLocked": false,
+        "inputLocked": false,
+        "uiBound": true,
+        "gamePresent": false,
+        "boatDriven": false,
+        "boatThrottle": 0,
+        "startOpen": false,
+        "helpOpen": false,
+        "panelOpen": false
+      }
+    },
+    {
+      "name": "F enters free camera",
+      "status": "pass"
+    },
+    {
+      "name": "F returns to walking",
+      "status": "pass"
+    },
+    {
+      "name": "Home restores entrance and heading",
+      "status": "pass",
+      "resetDistanceMeters": 0,
+      "state": {
+        "playerPosition": [
+          -54,
+          3.04665140131064,
+          -85
+        ],
+        "cameraPosition": [
+          -54,
+          4.694377368421574,
+          -85
+        ],
+        "yaw": 3.141592653589793,
+        "pitch": -0.05,
+        "mode": "walk",
+        "freeCam": false,
+        "frame": 210,
+        "pointerLocked": false,
+        "inputLocked": false,
+        "uiBound": true,
+        "gamePresent": false,
+        "boatDriven": false,
+        "boatThrottle": 0,
+        "startOpen": false,
+        "helpOpen": false,
+        "panelOpen": false
+      }
+    },
+    {
+      "name": "H toggles settings open",
+      "status": "pass"
+    },
+    {
+      "name": "H toggles settings closed",
+      "status": "pass"
+    },
+    {
+      "name": "F1 opens Chinese exploration guide",
+      "status": "pass"
+    },
+    {
+      "name": "Credits reachable from guide with attribution",
+      "status": "pass",
+      "url": "http://127.0.0.1:5192/credits.html",
+      "title": "来源与致谢 · 月湾岛"
+    },
+    {
+      "name": "F1 closes guide",
+      "status": "pass"
+    },
+    {
+      "name": "State regression: Home leaves helm and clears throttle",
+      "status": "pass",
+      "setup": "Called player.takeHelm() directly; this is not a real boarding/navigation test. W and Home were browser keyboard events.",
+      "before": {
+        "playerPosition": [
+          -46.11277009196635,
+          0.35906527052160575,
+          18.826551118157035
+        ],
+        "cameraPosition": [
+          -45.60753515880039,
+          4.432194421376478,
+          5.83378723634944
+        ],
+        "yaw": 3.141592653589793,
+        "pitch": -0.05,
+        "mode": "boat",
+        "freeCam": false,
+        "frame": 325,
+        "pointerLocked": false,
+        "inputLocked": false,
+        "uiBound": true,
+        "gamePresent": false,
+        "boatDriven": true,
+        "boatThrottle": 0.43989631628456793,
+        "startOpen": false,
+        "helpOpen": false,
+        "panelOpen": false
+      },
+      "after": {
+        "playerPosition": [
+          -54,
+          3.04665140131064,
+          -85
+        ],
+        "cameraPosition": [
+          -54,
+          4.694377368421574,
+          -85
+        ],
+        "yaw": 3.141592653589793,
+        "pitch": -0.05,
+        "mode": "walk",
+        "freeCam": false,
+        "frame": 335,
+        "pointerLocked": false,
+        "inputLocked": false,
+        "uiBound": true,
+        "gamePresent": false,
+        "boatDriven": false,
+        "boatThrottle": 0,
+        "startOpen": false,
+        "helpOpen": false,
+        "panelOpen": false
+      }
+    }
+  ],
+  "console": [
+    {
+      "type": "warning",
+      "text": "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+      "location": {
+        "url": "http://127.0.0.1:5192/assets/GPU-CCgDO5fU.js",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "ShoreWaves.buildDirTexture: no shore field data on the terrain; using terrainShoreSample instead",
+      "location": {
+        "url": "http://127.0.0.1:5192/assets/index-DaqOPfFt.js",
+        "line": 9086,
+        "column": 211,
+        "lineNumber": 9086,
+        "columnNumber": 211
+      }
+    }
+  ],
+  "pageErrors": [],
+  "httpErrors": [],
+  "requestsFailed": [],
+  "screenshots": [
+    "screenshots/01-start.png",
+    "screenshots/02-walking.png",
+    "screenshots/03-settings.png",
+    "screenshots/04-guide.png",
+    "screenshots/05-credits.png"
+  ],
+  "browserExecutable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "playwrightModule": "E:\\game\\3D布娃娃物理喜剧\\node_modules\\playwright-core\\index.mjs",
+  "homeDuringLoad": {
+    "ms": 236.2999999821186,
+    "hasUI": true,
+    "hasPlayer": false,
+    "appReady": false,
+    "loadingStatus": "Starting WebGPU…"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.58",
+    "revision": "@a654841425914cbb703a2931e07b70a83aedbafd",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.11"
+  },
+  "initialState": {
+    "playerPosition": [
+      -54,
+      3.04665140131064,
+      -85
+    ],
+    "cameraPosition": [
+      -54,
+      4.66665140131064,
+      -85
+    ],
+    "yaw": 3.141592653589793,
+    "pitch": -0.05,
+    "mode": "walk",
+    "freeCam": false,
+    "frame": 36,
+    "pointerLocked": false,
+    "inputLocked": false,
+    "uiBound": true,
+    "gamePresent": false,
+    "boatDriven": false,
+    "boatThrottle": 0,
+    "startOpen": true,
+    "helpOpen": false,
+    "panelOpen": false
+  },
+  "worldStart": {
+    "position": [
+      -54,
+      3.04665140131064,
+      -85
+    ],
+    "yaw": 3.141592653589793,
+    "source": "Observed initial walking state before any movement"
+  },
+  "pointerLock": {
+    "acquired": false,
+    "errors": [
+      {
+        "ms": 15328.899999976158,
+        "message": "pointerlockerror"
+      }
+    ],
+    "note": "Headless browser did not grant pointer lock; keyboard movement is still tested independently. Mouse-look lock remains unverified in a visible browser."
+  },
+  "finalState": {
+    "playerPosition": [
+      -54,
+      3.04665140131064,
+      -85
+    ],
+    "cameraPosition": [
+      -54,
+      4.694377368421574,
+      -85
+    ],
+    "yaw": 3.141592653589793,
+    "pitch": -0.05,
+    "mode": "walk",
+    "freeCam": false,
+    "frame": 335,
+    "pointerLocked": false,
+    "inputLocked": false,
+    "uiBound": true,
+    "gamePresent": false,
+    "boatDriven": false,
+    "boatThrottle": 0,
+    "startOpen": false,
+    "helpOpen": false,
+    "panelOpen": false
+  },
+  "success": true
+}

@@ -1,6 +1,6 @@
 import './core/BenchSeed.js';
 import { App } from './App.js';
-import { UI } from './ui/UI.js';
+import { ExplorationUI } from './ui/ExplorationUI.js';
 import { AppUI } from './ui/AppUI.js';
 
 // ?bench runs in background tabs too (automation): rAF does not fire in a hidden page
@@ -12,8 +12,9 @@ if ( /[?&]bench\b/.test( location.search ) ) {
 
 }
 
-const ui = new UI();
+const ui = new ExplorationUI();
 const app = new App();
+ui.bindApp( app );
 window.__ui = ui;
 
 app.init( ( p, text, until ) => ui.setLoading( p, text, until ) ).then( async () => {

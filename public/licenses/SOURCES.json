@@ -1,0 +1,72 @@
+{
+  "notes": "License texts are preserved byte-for-byte. Branch URLs are retrieval snapshots, not claims about the exact upstream code revision embedded by Tidewater. AMD source URL explicitly selects tag v2.2.1.",
+  "files": [
+    {
+      "file": "Tidewater-LICENSE.txt",
+      "method": "byte-for-byte local copy",
+      "local_source": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/dgreenheck/tidewater/4811ba48d795197de5621985f404e765c0b7c0ef/LICENSE",
+      "bytes": 1104,
+      "sha256": "bf7d406711a4cbf9af0b9eb5f2cf464ae88053e999e0e64a92b3423494dd8699"
+    },
+    {
+      "file": "Tidewater-CREDITS.md",
+      "method": "byte-for-byte local copy",
+      "local_source": "CREDITS.md",
+      "source_url": "https://raw.githubusercontent.com/dgreenheck/tidewater/4811ba48d795197de5621985f404e765c0b7c0ef/CREDITS.md",
+      "bytes": 5240,
+      "sha256": "081237438750cd1244c57ebacd6246213c807e8265b281b921b107f08426f83b"
+    },
+    {
+      "file": "LICENSE-PermanentMarker.txt",
+      "method": "byte-for-byte local copy",
+      "local_source": "tools/props/fonts/LICENSE-PermanentMarker.txt",
+      "source_url": "https://raw.githubusercontent.com/dgreenheck/tidewater/4811ba48d795197de5621985f404e765c0b7c0ef/tools/props/fonts/LICENSE-PermanentMarker.txt",
+      "bytes": 11560,
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "file": "OFL-CabinSketch.txt",
+      "method": "byte-for-byte local copy",
+      "local_source": "tools/props/fonts/OFL-CabinSketch.txt",
+      "source_url": "https://raw.githubusercontent.com/dgreenheck/tidewater/4811ba48d795197de5621985f404e765c0b7c0ef/tools/props/fonts/OFL-CabinSketch.txt",
+      "bytes": 4509,
+      "sha256": "e0a518c53cdbe1af0e596691de412f2ea192c8ebe6fbb9d5456cbddf35f98c08"
+    },
+    {
+      "file": "OFL-Oswald.txt",
+      "method": "byte-for-byte local copy",
+      "local_source": "tools/props/fonts/OFL-Oswald.txt",
+      "source_url": "https://raw.githubusercontent.com/dgreenheck/tidewater/4811ba48d795197de5621985f404e765c0b7c0ef/tools/props/fonts/OFL-Oswald.txt",
+      "bytes": 4483,
+      "sha256": "0fd731a904b729a4e02eaf5e8ebd06783edd9abe400e8882760160230675b652"
+    },
+    {
+      "file": "three.js-LICENSE.txt",
+      "method": "unmodified official license response",
+      "source_url": "https://raw.githubusercontent.com/mrdoob/three.js/dev/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/mrdoob/three.js/dev/LICENSE",
+      "retrieved_at_utc": "2026-09-30T09:08:10.498081+00:00",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "file": "SMAA-LICENSE.txt",
+      "method": "unmodified official license response",
+      "source_url": "https://raw.githubusercontent.com/iryoku/smaa/master/LICENSE.txt",
+      "resolved_url": "https://raw.githubusercontent.com/iryoku/smaa/master/LICENSE.txt",
+      "retrieved_at_utc": "2026-09-30T09:08:11.888462+00:00",
+      "bytes": 1470,
+      "sha256": "2b848b67ba50ac40b53e11cf1ccdaee2a190ca83b4652cba695a5f1ce81f52ae"
+    },
+    {
+      "file": "AMD-FSR2-LICENSE.txt",
+      "method": "unmodified official license response",
+      "source_url": "https://raw.githubusercontent.com/GPUOpen-Effects/FidelityFX-FSR2/v2.2.1/LICENSE.txt",
+      "resolved_url": "https://raw.githubusercontent.com/GPUOpen-Effects/FidelityFX-FSR2/v2.2.1/LICENSE.txt",
+      "retrieved_at_utc": "2026-09-30T09:08:13.243915+00:00",
+      "bytes": 1165,
+      "sha256": "6a12d0fdb5410839473f80b5395cf9493e8c007f76faed9f3fa41ab2f273803e"
+    }
+  ]
+}

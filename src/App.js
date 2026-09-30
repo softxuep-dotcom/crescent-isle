@@ -70,10 +70,10 @@ export class App {
 	constructor() {
 
 		this.settings = {
-			timeOfDay: 16.2,
+			timeOfDay: 15.6,
 			sunAzimuth: 0, // degrees: turns the sun's daily path about the vertical
 			timeSpeed: 0, // hours per real second
-			exposure: 0.55,
+			exposure: 0.57,
 			renderScale: 1, // internal resolution (the temporal upscaler reconstructs the output), Performance tab
 		};
 		this.qs = new URLSearchParams( location.search );
@@ -116,6 +116,7 @@ export class App {
 			// sky-pro-webgpu's clouds ("Partly cloudy"); ?oldClouds: the previous ones
 			this.clouds = qs.has( 'oldClouds' ) ? new Clouds( renderer, this.atmosphere ) : new SkyProClouds( renderer, this.atmosphere );
 			if ( this.clouds.ready ) await this.clouds.ready;
+			this.clouds.coverage.value = 0.40;
 			this.sky.clouds = this.clouds;
 
 		}
@@ -167,7 +168,12 @@ export class App {
 
 		// ---------------------------------------------------------------- ocean
 		await progress( 0.3, 'Simulating the ocean…' );
-		this.fft = new OceanFFT( renderer );
+		// A sheltered, gently breezy bay; retain all four FFT cascades and shore simulation.
+		this.fft = new OceanFFT( renderer, {
+			choppiness: 0.72,
+			local: { windSpeed: 5.5, windDirection: 25, fetch: 80, spreadBlend: 0.85, swell: 0.05 },
+			swell: { scale: 0.34, windSpeed: 6, windDirection: 5, fetch: 1200, spreadBlend: 1, swell: 0.9, shortWavesFade: 0.1 },
+		} );
 		if ( this.reef.setOcean ) this.reef.setOcean( this.fft ); // coral / sea fan sway follows the simulated swell
 		this.foamTexture = createFoamTexture( renderer );
 		this.oceanLOD = new CDLOD( { gridSize: Number( qs.get( 'G' ) || 32 ), leafSize: 8, levels: 12, minY: - 25, maxY: 25 } );
@@ -176,6 +182,8 @@ export class App {
 		this.seaDetail = new SeaDetail();
 		this.surface.detail = this.seaDetail;
 		this.shore = new ShoreWaves( this.terrainGPU );
+		this.shore.amplitude.value = 0.24;
+		this.shore.period.value = 10;
 		this.surface.shore = this.shore;
 		this.caustics = qs.has( 'noCaustics' ) ? null : new Caustics( renderer, this.fft );
 		if ( this.caustics ) this.caustics.detail = this.seaDetail;
@@ -328,6 +336,9 @@ fn terrainWetness( xz: vec2f, h: f32 ) -> vec2f {
 			sky: this.sky, clouds: this.clouds, terrain: this.terrainGPU, csm: this.csm,
 		} );
 		this.post = new PostFX( renderer, { sceneRenderer: this.sceneRenderer, camera, underwater: this.underwater, clouds: this.clouds, sunDir: this.atmosphere.sunDir, haze: this.haze } );
+		this.post.params.vignette.value = 0.18;
+		this.post.params.grain.value = 0.006;
+		this.post.params.saturation.value = 1.03;
 		G.exposure.value = this.settings.exposure;
 		if ( qs.has( 'scale' ) ) this.settings.renderScale = Number( qs.get( 'scale' ) ) || 1;
 		this.setRenderScale( this.settings.renderScale );

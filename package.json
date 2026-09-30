@@ -1,11 +1,13 @@
 {
-  "name": "tidewater",
+  "name": "crescent-isle",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite --host 127.0.0.1 --port 5189",
+    "dev": "vite --host 127.0.0.1 --port 5191",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node test/game-logic.mjs && node test/engine-smoke.mjs"
+    "test": "node test/game-logic.mjs && node test/engine-smoke.mjs",
+    "test:walk": "node tools/review/walk-check.mjs",
+    "review": "node tools/review/run.mjs"
   },
   "devDependencies": {
     "vite": "^8.3.0",
