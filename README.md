@@ -2,6 +2,8 @@
 
 基于 [Tidewater](https://github.com/dgreenheck/tidewater) 的独立海岛探索原型。保留原生 WebGPU 海洋、天空、地形、行走、游泳与登船能力，重新设计月牙海岸、西侧码头、三间小屋和植被分区。此期聚焦漫游，不启用钓鱼、交易或升级系统。
 
+在线体验：[月湾岛 · GitHub Pages](https://softxuep-dotcom.github.io/crescent-isle/)。推送到 `main` 后，GitHub Actions 自动构建并发布。
+
 ## 本地运行
 
 需要现代桌面浏览器和支持 WebGPU 的显卡。建议 Node.js 24；CPU 漫游测试使用 Node 22.15+ 的模块钩子。
@@ -19,7 +21,7 @@ npm run build
 npm run preview -- --host 127.0.0.1 --port 5192
 ```
 
-构建结果在 `dist/`；它需要通过 localhost 或 HTTPS 服务打开，不使用 file://。构建保留素材和许可证。未向公网发布。
+构建结果在 `dist/`；它需要通过 localhost 或 HTTPS 服务打开，不使用 file://。构建保留素材和许可证，正式站点通过 GitHub Pages 发布。
 
 ## 验收与来源
 
