@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="月湾岛：沿着木码头、海岸与林间小径慢慢探索。基于 Tidewater 的 WebGPU 海岛场景。" />
   <title>月湾岛 · Crescent Isle</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
@@ -12,6 +12,8 @@
     #app, #app canvas { display: block; }
     #loader { background: radial-gradient(ellipse at 70% 25%, #426f74, #142e36 75%); }
     .loader-title { font-family: "Microsoft YaHei", sans-serif; letter-spacing: .25em; }
+    .compat-retry { min-height: 44px; margin-top: 16px; padding: 10px 22px; background: #e4ce99; color: #182e2c; border: 0; border-radius: 22px; font: inherit; cursor: pointer; }
+    #compatibility-message { white-space: normal; overflow-wrap: anywhere; color: #f4eddb; }
     #fps { position: fixed; top: 10px; left: 12px; z-index: 50; font: 12px/1.2 ui-monospace, monospace; color: #e8f6ff; background: #08162088; padding: 5px 9px; border-radius: 6px; pointer-events: none; }
   </style>
 </head>

@@ -24,8 +24,11 @@ export const GPU = {
 	frame: 0,
 	samplers: null,
 	_submitHooks: [],
+	failure: null,
+	onError: null,
 
 	async init( { canvas = null, requiredLimits = {}, headless = false } = {} ) {
+		this.failure = null;
 
 		if ( ! navigator.gpu ) throw new Error( 'WebGPU is not available in this browser.' );
 		const adapter = await navigator.gpu.requestAdapter( { powerPreference: 'high-performance' } );
@@ -61,8 +64,15 @@ export const GPU = {
 		this.device = device;
 		this.queue = device.queue;
 		this.limits = device.limits;
-		device.lost.then( ( info ) => console.error( 'WebGPU device lost:', info.message ) );
-		device.addEventListener && device.addEventListener( 'uncapturederror', ( e ) => console.error( 'WebGPU:', e.error.message.split( '\n' ).slice( 0, 6 ).join( '\n' ) ) );
+		device.lost.then( ( info ) => {
+			const error = new Error( 'WebGPU device lost: ' + info.message );
+			this.fail( error );
+			console.error( error.message );
+		} );
+		device.addEventListener && device.addEventListener( 'uncapturederror', ( e ) => {
+			this.fail( e.error );
+			console.error( 'WebGPU:', e.error.message.split( '\n' ).slice( 0, 6 ).join( '\n' ) );
+		} );
 
 		if ( canvas && ! headless ) {
 
@@ -170,6 +180,7 @@ export const GPU = {
 			}, ( e ) => {
 
 				h.failed = true;
+				this.fail( new Error( `WebGPU pipeline "${ desc.label }": ${ e.message }` ) );
 				console.error( `WebGPU: pipeline "${ desc.label }" failed: ${ e.message.split( '\n' ).slice( 0, 6 ).join( '\n' ) }` );
 
 			} );
@@ -194,7 +205,14 @@ export const GPU = {
 	async pipelinesReady() {
 
 		while ( this._pending.size ) await Promise.all( [ ...this._pending ] );
+		if ( this.failure ) throw this.failure;
 
+	},
+
+	fail( error ) {
+		if ( this.failure ) return;
+		this.failure = error;
+		this.onError?.( error );
 	},
 
 	// A compute or render pass on the frame encoder.

@@ -2,6 +2,7 @@ import './core/BenchSeed.js';
 import { App } from './App.js';
 import { ExplorationUI } from './ui/ExplorationUI.js';
 import { AppUI } from './ui/AppUI.js';
+import { GPU } from './engine/gpu/GPU.js';
 
 // ?bench runs in background tabs too (automation): rAF does not fire in a hidden page
 if ( /[?&]bench\b/.test( location.search ) ) {
@@ -17,7 +18,36 @@ const app = new App();
 ui.bindApp( app );
 window.__ui = ui;
 
+function showSceneError( error ) {
+	app.engine?.stop();
+	app.input?.clearVirtual();
+	if ( app.input ) app.input.enabled = false;
+	const loader = document.getElementById( 'loader' );
+	loader.style.display = '';
+	loader.classList.remove( 'tw-hidden' );
+	ui.setLoadingError( '暂时无法启动海岛场景' );
+	const note = loader.querySelector( '.loader-note' );
+	note.id = 'compatibility-message';
+	note.setAttribute( 'role', 'alert' );
+	note.textContent = ! globalThis.isSecureContext
+		? '请通过 HTTPS 打开正式网址。手机访问电脑的普通 HTTP 局域网地址无法使用 WebGPU。'
+		: ! navigator.gpu
+			? '当前浏览器或系统尚未提供 WebGPU。请更新系统与浏览器，或换用支持 WebGPU 的设备后重试。'
+			: /No WebGPU adapter/.test( error.message )
+				? '浏览器未取得可用的图形设备。请检查浏览器和系统的图形支持，或换一台设备打开。'
+				: '场景加载失败，或当前设备无法完成图形渲染。请检查网络并刷新重试；若仍失败，请换用支持 WebGPU 的设备。';
+	if ( ! loader.querySelector( '.compat-retry' ) ) {
+		const retry = document.createElement( 'button' );
+		retry.className = 'compat-retry';
+		retry.textContent = '刷新重试';
+		retry.onclick = () => location.reload();
+		note.after( retry );
+	}
+}
+GPU.onError = showSceneError;
+
 app.init( ( p, text, until ) => ui.setLoading( p, text, until ) ).then( async () => {
+	if ( GPU.failure ) throw GPU.failure;
 
 	app.ui = new AppUI( app, ui );
 	ui.setLoading( 1, 'Ready' );
@@ -43,6 +73,6 @@ app.init( ( p, text, until ) => ui.setLoading( p, text, until ) ).then( async ()
 } ).catch( ( e ) => {
 
 	console.error( e );
-	ui.setLoadingError( 'Something went wrong: ' + e.message );
+	showSceneError( e );
 
 } );

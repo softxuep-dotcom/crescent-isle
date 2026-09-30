@@ -1,0 +1,159 @@
+.is-touch {
+  --island-touch-glass: #132f37b8;
+  --island-touch-line: #f4eddb5c;
+  --island-touch-accent: #e4ce99;
+  --island-touch-left: max(18px, env(safe-area-inset-left));
+  --island-touch-right: max(18px, env(safe-area-inset-right));
+  --island-touch-bottom: max(24px, calc(env(safe-area-inset-bottom) + 12px));
+}
+
+.island-mobile {
+  position: absolute;
+  inset: 0;
+  color: var(--island-ivory);
+  pointer-events: none;
+  font: 13px "Microsoft YaHei", system-ui, sans-serif;
+}
+.island-mobile [role="group"], .island-mobile button {
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+.island-mobile-nav {
+  position: absolute;
+  top: max(12px, env(safe-area-inset-top));
+  right: var(--island-touch-right);
+  display: flex;
+  gap: 6px;
+}
+.island-mobile-nav button {
+  min-height: 44px;
+  min-width: 50px;
+  padding: 0 12px;
+  background: var(--island-touch-glass);
+  border: 1px solid var(--island-touch-line);
+  border-radius: 22px;
+}
+.island-stick {
+  position: absolute;
+  left: var(--island-touch-left);
+  bottom: var(--island-touch-bottom);
+  width: 132px;
+  height: 132px;
+  border: 1px solid var(--island-touch-line);
+  border-radius: 50%;
+  background: #16384050;
+  box-shadow: inset 0 0 24px #162c2933, 0 3px 16px #102b2926;
+}
+.island-stick-ring {
+  position: absolute;
+  inset: 25%;
+  border: 1px solid #f4eddb29;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.island-stick-thumb {
+  position: absolute;
+  inset: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  border: 1px solid #f4eddb9c;
+  border-radius: 50%;
+  background: #ead9b573;
+  box-shadow: 0 2px 12px #132f3733;
+  pointer-events: none;
+}
+.island-stick-label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: #f4eddbb8;
+  pointer-events: none;
+}
+.island-stick.is-held { border-color: var(--island-touch-accent); }
+.island-stick.is-held .island-stick-thumb { background: #e4ce99b8; }
+.island-touch-actions {
+  position: absolute;
+  bottom: var(--island-touch-bottom);
+  right: var(--island-touch-right);
+  display: grid;
+  grid-template-columns: repeat(2, 62px);
+  grid-template-rows: repeat(2, 62px);
+  gap: 8px;
+  pointer-events: none;
+}
+.island-touch-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 62px;
+  height: 62px;
+  border: 1px solid var(--island-touch-line);
+  border-radius: 50%;
+  background: var(--island-touch-glass);
+  box-shadow: 0 3px 16px #102b2926;
+  pointer-events: auto;
+}
+.island-touch-action small { font-size: 9px; color: #f4eddbb8; }
+.island-touch-action.is-held {
+  border-color: var(--island-touch-accent);
+  background: #dec68fe6;
+  color: #152e35;
+}
+.island-touch-action.is-held small { color: #152e35; }
+.island-touch-jump { grid-area: 1 / 2; }
+.island-touch-dive { grid-area: 2 / 1; }
+.island-touch-interact { grid-area: 2 / 2; }
+.island-mobile button:focus-visible { outline: 2px solid var(--island-touch-accent); outline-offset: 3px; }
+
+/* Keep the horizon and both thumb zones clear; retain only a compact FPS readout. */
+.is-touch .tw-rail, .is-touch .tw-brand, .is-touch .tw-spark,
+.is-touch .tw-stats-sub, .is-touch .tw-boat, .is-touch .tw-depth,
+.is-touch .island-home, .is-touch .tw-panel-foot { display: none; }
+.is-touch .tw-tl { top: max(12px, env(safe-area-inset-top)); left: var(--island-touch-left); }
+.is-touch .tw-stats { display: block; padding: 12px 9px; border-radius: 22px; }
+.is-touch .tw-fps { font-size: 16px; }
+.is-touch .tw-prompt {
+  bottom: calc(var(--island-touch-bottom) + 150px);
+  max-width: calc(100vw - 36px);
+  white-space: normal;
+  font-size: 12px;
+}
+.is-touch .tw-toasts { top: calc(max(12px, env(safe-area-inset-top)) + 54px); }
+.is-touch .tw-panel {
+  top: max(10px, env(safe-area-inset-top));
+  bottom: max(10px, env(safe-area-inset-bottom));
+  right: var(--island-touch-right);
+  max-width: calc(100vw - var(--island-touch-left) - var(--island-touch-right));
+}
+.is-touch .tw-panel-actions .tw-icon-btn, .is-touch .tw-help-close { min-width: 44px; min-height: 44px; }
+/* Photo mode has a keyboard-only exit upstream; omit that entry on touch. */
+.is-touch .tw-panel-actions [aria-label="Photo mode (P)"] { display: none; }
+.is-touch .tw-help {
+  padding: max(12px, env(safe-area-inset-top)) var(--island-touch-right) max(12px, env(safe-area-inset-bottom)) var(--island-touch-left);
+}
+.is-touch .tw-help-card { max-height: 100%; overscroll-behavior: contain; }
+
+@media (max-width: 360px) {
+  .is-touch { --island-touch-left: max(12px, env(safe-area-inset-left)); --island-touch-right: max(12px, env(safe-area-inset-right)); }
+  .island-stick { width: 116px; height: 116px; }
+  .island-touch-actions { grid-template-columns: repeat(2, 56px); grid-template-rows: repeat(2, 56px); gap: 6px; }
+  .island-touch-action { width: 56px; height: 56px; }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .is-touch { --island-touch-bottom: max(16px, env(safe-area-inset-bottom)); }
+  .island-stick { width: 118px; height: 118px; }
+  .island-touch-actions { grid-template-columns: repeat(2, 56px); grid-template-rows: repeat(2, 56px); gap: 6px; }
+  .island-touch-action { width: 56px; height: 56px; }
+  .is-touch .tw-prompt { bottom: calc(var(--island-touch-bottom) + 16px); max-width: 38vw; }
+  .is-touch .tw-help-card { padding: 12px 18px; }
+  .is-touch .tw-help-head { margin-bottom: 8px; }
+  .is-touch .tw-help-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

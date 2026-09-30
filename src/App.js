@@ -5,6 +5,7 @@ import { FrameUniforms } from './engine/render/Frame.js';
 
 import { Engine } from './core/Engine.js';
 import { Input } from './core/Input.js';
+import { useTouchControls } from './core/DeviceProfile.js';
 import { CDLOD } from './core/CDLOD.js';
 import { G } from './core/Globals.js';
 import { Profiler } from './core/Profiler.js';
@@ -68,13 +69,14 @@ const _up = new Vector3( 0, 1, 0 );
 export class App {
 
 	constructor() {
+		this.touchMode = useTouchControls();
 
 		this.settings = {
 			timeOfDay: 15.6,
 			sunAzimuth: 0, // degrees: turns the sun's daily path about the vertical
 			timeSpeed: 0, // hours per real second
 			exposure: 0.57,
-			renderScale: 1, // internal resolution (the temporal upscaler reconstructs the output), Performance tab
+			renderScale: this.touchMode ? 0.7 : 1, // lower mobile pixel cost; adjustable in Performance
 		};
 		this.qs = new URLSearchParams( location.search );
 
@@ -103,7 +105,7 @@ export class App {
 		this.scene = scene;
 		this.camera = camera;
 
-		this.input = new Input( engine.domElement );
+		this.input = new Input( engine.domElement, { touchMode: this.touchMode } );
 		this.fly = new FlyCamera( camera, engine.domElement, this.input );
 		this.fly.setPose( new Vector3( 20, 6, - 20 ), Math.PI * 0.9, - 0.12 );
 
@@ -125,7 +127,7 @@ export class App {
 		// contact-hardening filter sized by the sun's disc on the near cascade. Each cascade's depth range
 		// is its light margin (200 m) + its extent, which keeps the depth bias small in metres.
 		// Shadows come from the opaque and the late (transparent-pass) layers.
-		this.csm = this.shadows = new SunShadows( { size: 2048, splits: [ 10, 60, 400 ], lightMargin: 200, normalBias: [ 0.015, 0.06, 0.3 ], bias: 0.00002 } );
+		this.csm = this.shadows = new SunShadows( { size: this.touchMode ? 1024 : 2048, splits: [ 10, 60, 400 ], lightMargin: 200, normalBias: [ 0.015, 0.06, 0.3 ], bias: 0.00002 } );
 		this.shadows.layerMask = ( 1 << LAYERS.OPAQUE ) | ( 1 << LAYERS.TRANSPARENT );
 
 		this.environment = new Environment( renderer, scene, this.sky );
