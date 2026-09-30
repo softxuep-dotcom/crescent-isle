@@ -1,0 +1,4534 @@
+{
+  "label": "stage2-settlement",
+  "url": "http://127.0.0.1:5191/?bench=&scale=1",
+  "capturedAt": "2026-09-30T08:28:27.093Z",
+  "method": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "renderScale": 1,
+    "deviceScaleFactor": 1,
+    "cameras": {
+      "beach": {
+        "p": [
+          15,
+          3,
+          -58
+        ],
+        "yaw": 3.141592653589793,
+        "pitch": -0.08,
+        "time": 16.2
+      },
+      "aerial": {
+        "p": [
+          60,
+          95,
+          140
+        ],
+        "yaw": 0.25132741228718347,
+        "pitch": -0.55,
+        "time": 15
+      },
+      "village": {
+        "p": [
+          62,
+          7,
+          -62
+        ],
+        "yaw": 0.34,
+        "pitch": -0.12,
+        "time": 15.5
+      },
+      "pier": {
+        "p": [
+          75,
+          4,
+          -10
+        ],
+        "yaw": 3.6128315516282616,
+        "pitch": -0.1,
+        "time": 15.5
+      }
+    },
+    "views": [
+      "beach",
+      "aerial",
+      "village",
+      "pier"
+    ],
+    "captureOnly": false,
+    "resetHistory": true,
+    "seed": "original BenchSeed.js (?bench)",
+    "screenshotFrames": 64,
+    "screenshotDt": 0,
+    "screenshotSimulationTime": 1000,
+    "warmupFrames": 90,
+    "measuredFrames": 120,
+    "rafFrames": 180,
+    "coldDefinition": "New empty Chromium profile; OS file cache and GPU driver shader caches are not cleared.",
+    "warmDefinition": "Same profile and process, normal reload after initial shots and measurements.",
+    "loadDefinition": "Navigation to visible start overlay after initialization, shader compilation and loader fade; local dev server, not public Internet.",
+    "fpsDefinition": "Animation-loop FPS: actual app.frame calls driven by requestAnimationFrame in headless Chromium. Bench throughput/GPU estimates are reported separately and are not displayed FPS.",
+    "rendering": "Headless hardware WebGPU if available; adapter details recorded. Headless timing is not a physical monitor refresh measurement."
+  },
+  "loads": {
+    "coldProfile": {
+      "stages": [
+        {
+          "status": "Starting…",
+          "ms": 152.40000000596046
+        },
+        {
+          "status": "Starting WebGPU…",
+          "ms": 297.40000000596046
+        },
+        {
+          "status": "Building the atmosphere…",
+          "ms": 417.40000000596046
+        },
+        {
+          "status": "Shaping the island…",
+          "ms": 443.90000000596046
+        },
+        {
+          "status": "Building the village…",
+          "ms": 2053.7000000178814
+        },
+        {
+          "status": "Planting the island…",
+          "ms": 2164.0999999940395
+        },
+        {
+          "status": "Rolling in the swell…",
+          "ms": 3098.0999999940395
+        },
+        {
+          "status": "Growing the reef…",
+          "ms": 3813.4000000059605
+        },
+        {
+          "status": "Simulating the ocean…",
+          "ms": 4934.0999999940395
+        },
+        {
+          "status": "Preparing the shaders…",
+          "ms": 5909.4000000059605
+        },
+        {
+          "status": "Compiling shaders…",
+          "ms": 5920.700000017881
+        },
+        {
+          "status": "Warming up…",
+          "ms": 12544.59999999404
+        },
+        {
+          "status": "Ready",
+          "ms": 12732.59999999404
+        }
+      ],
+      "navigationStart": 1790756911962.4,
+      "domContentLoadedMs": 297.59999999403954,
+      "windowLoadMs": 2164.300000011921,
+      "appReadyMs": 12732.59999999404,
+      "loaderFadeStartMs": 12732.59999999404,
+      "firstActionableMs": 13666.200000017881,
+      "navigation": {
+        "name": "http://127.0.0.1:5191/?bench=&scale=1",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 2164.300000011921,
+        "navigationId": 458,
+        "initiatorType": "navigation",
+        "deliveryType": "cache",
+        "nextHopProtocol": "",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 3.9000000059604645,
+        "domainLookupStart": 3.9000000059604645,
+        "domainLookupEnd": 3.9000000059604645,
+        "connectStart": 3.9000000059604645,
+        "secureConnectionStart": 0,
+        "connectEnd": 3.9000000059604645,
+        "requestStart": 5.9000000059604645,
+        "responseStart": 9.700000017881393,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 9.700000017881393,
+        "responseEnd": 10.099999994039536,
+        "transferSize": 300,
+        "encodedBodySize": 3845,
+        "decodedBodySize": 3845,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 14,
+        "unloadEventEnd": 14,
+        "domInteractive": 152.40000000596046,
+        "domContentLoadedEventStart": 297.5,
+        "domContentLoadedEventEnd": 297.59999999403954,
+        "domComplete": 2164.300000011921,
+        "loadEventStart": 2164.300000011921,
+        "loadEventEnd": 2164.300000011921,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:5191/@vite/client",
+          "duration": 1.9000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/ui/keyart-720.jpg",
+          "duration": 2,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/ui.css",
+          "duration": 2.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat+Brush&family=Kalam:wght@400;700&display=swap",
+          "duration": 0,
+          "transferSize": 0,
+          "encodedBodySize": 1144
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/main.js?t=1790756903219",
+          "duration": 2.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/node_modules/vite/dist/client/env.mjs",
+          "duration": 1.2999999821186066,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/BenchSeed.js",
+          "duration": 2.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/App.js?t=1790756903219",
+          "duration": 2.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/UI.js",
+          "duration": 2.4000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/AppUI.js",
+          "duration": 2.7000000178813934,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/index.js",
+          "duration": 2.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/GPU.js",
+          "duration": 2.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Shadows.js",
+          "duration": 2.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Frame.js",
+          "duration": 3.9000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Engine.js",
+          "duration": 3.9000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Input.js",
+          "duration": 4.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/CDLOD.js",
+          "duration": 4.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Globals.js",
+          "duration": 7.200000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Profiler.js",
+          "duration": 7.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/SceneRenderer.js",
+          "duration": 7.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/SceneRenderer.js",
+          "duration": 8,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/DebugViews.js",
+          "duration": 8.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Atmosphere.js",
+          "duration": 9.800000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Sky.js",
+          "duration": 10.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Clouds.js",
+          "duration": 10.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/SkyProClouds.js",
+          "duration": 10.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Environment.js",
+          "duration": 11,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/TerrainData.js?t=1790756857314",
+          "duration": 11.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/TerrainGPU.js",
+          "duration": 11.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Terrain.js?t=1790756857252",
+          "duration": 14.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/ShoreField.js",
+          "duration": 15,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/WorldLayout.js?t=1790756857252",
+          "duration": 15.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Colliders.js",
+          "duration": 15.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Village.js?t=1790756857252",
+          "duration": 15.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Reef.js?t=1790756857252",
+          "duration": 15.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/BoatModel.js",
+          "duration": 19.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Rocks.js?t=1790756857252",
+          "duration": 19.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Debris.js?t=1790756857314",
+          "duration": 20,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Wildlife.js?t=1790756857252",
+          "duration": 20,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/marine/Whale.js",
+          "duration": 20.200000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/OceanFFT.js",
+          "duration": 20.100000023841858,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WaterSurface.js",
+          "duration": 24.100000023841858,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WaterMaterial.js",
+          "duration": 24.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/FoamTexture.js",
+          "duration": 24.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/ShoreWaves.js",
+          "duration": 24.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/ShoreSim.js",
+          "duration": 25.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/Caustics.js",
+          "duration": 25.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/UnderwaterLighting.js",
+          "duration": 28.299999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/RefractionPass.js",
+          "duration": 28.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/GroundBounce.js",
+          "duration": 28.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/LocalLights.js",
+          "duration": 28.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WaterQuery.js",
+          "duration": 28.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/Breakers.js",
+          "duration": 28.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/SurfFoam.js",
+          "duration": 32.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/fx/Spray.js",
+          "duration": 32.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/SeaDetail.js",
+          "duration": 33,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/fx/MarineSnow.js",
+          "duration": 33.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/fx/AirMotes.js",
+          "duration": 33.29999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/Underwater.js",
+          "duration": 33.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/PostFX.js",
+          "duration": 36.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/AirHaze.js",
+          "duration": 36.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/FlyCamera.js",
+          "duration": 36.79999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/Player.js?t=1790756857252",
+          "duration": 36.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/BoatController.js?t=1790756857252",
+          "duration": 37,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/BoatSpray.js",
+          "duration": 36.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WakeSim.js",
+          "duration": 45.60000002384186,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Vegetation.js?t=1790756857302",
+          "duration": 45.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/audio/SoundScape.js?t=1790756857252",
+          "duration": 45.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/CameraVelocity.js",
+          "duration": 45.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/icons.js",
+          "duration": 45.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/index.js",
+          "duration": 38.20000001788139,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/index.js",
+          "duration": 42.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/index.js",
+          "duration": 42.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/core/EventDispatcher.js",
+          "duration": 42.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/constants.js",
+          "duration": 42.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Texture.js",
+          "duration": 39.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/wgsl/lighting.js",
+          "duration": 39.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Uniforms.js",
+          "duration": 44.20000001788139,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Shader.js",
+          "duration": 44.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/Engine.js",
+          "duration": 44.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/webgpu.js",
+          "duration": 44.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Material.js",
+          "duration": 41.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/FullscreenPass.js",
+          "duration": 41.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Mesh.js",
+          "duration": 45.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Scene.js",
+          "duration": 45.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Compute.js",
+          "duration": 41.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Readback.js",
+          "duration": 41.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/wgsl/common.js",
+          "duration": 41.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Mipmaps.js",
+          "duration": 40.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/ComputeMips.js",
+          "duration": 43.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/util/Noise.js",
+          "duration": 43.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/TerrainNoise.js",
+          "duration": 43.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/IslandShape.js?t=1790756857314",
+          "duration": 43.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/TerrainBake.js",
+          "duration": 43.20000001788139,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/DetailTextures.js",
+          "duration": 43.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/TerrainShading.js",
+          "duration": 46.10000002384186,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/Materials.js",
+          "duration": 46.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/GeoBuilder.js",
+          "duration": 46.29999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/VillageMaterials.js",
+          "duration": 46.39999997615814,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/TextureBaker.js",
+          "duration": 46.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/Buildings.js",
+          "duration": 46.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/Boardwalk.js",
+          "duration": 49,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Pier.js?t=1790756857252",
+          "duration": 49.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Props.js",
+          "duration": 49.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefGeometry.js",
+          "duration": 49.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefBatch.js",
+          "duration": 49.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefMaterials.js?t=1790756857252",
+          "duration": 49.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/LODFade.js",
+          "duration": 52.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefNoise.js",
+          "duration": 52.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Fish.js?t=1790756857252",
+          "duration": 52.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/HullLines.js",
+          "duration": 52.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/GeoKit.js",
+          "duration": 53,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/BoatMaterials.js",
+          "duration": 53.10000002384186,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/HullBuilder.js",
+          "duration": 56,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/Wheelhouse.js",
+          "duration": 56.20000001788139,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/DeckGear.js",
+          "duration": 56.29999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/Running.js",
+          "duration": 56.39999997615814,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/RockGeometry.js",
+          "duration": 56.29999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/DebrisPlacement.js?t=1790756857314",
+          "duration": 56.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/NatureMaterial.js",
+          "duration": 59.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/PebbleField.js",
+          "duration": 59.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/DebrisShapes.js",
+          "duration": 59.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/ScannedDebris.js",
+          "duration": 59.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/BirdBatch.js",
+          "duration": 59.70000001788139,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Birds.js?t=1790756857252",
+          "duration": 59.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/CritterBatch.js",
+          "duration": 61.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Crabs.js?t=1790756857252",
+          "duration": 62.10000002384186,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/ShadowBlobs.js",
+          "duration": 62.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/SwashProbe.js",
+          "duration": 62.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Shorebirds.js?t=1790756857252",
+          "duration": 62.89999997615814,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/marine/WhaleBrain.js",
+          "duration": 63.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/marine/WhaleTextures.js",
+          "duration": 65.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WhaleWater.js",
+          "duration": 63.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/SceneLighting.js",
+          "duration": 59.79999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/DataUtils.js",
+          "duration": 56.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/GTAO.js",
+          "duration": 51.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/AntiAlias.js",
+          "duration": 51.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/TemporalUpscale.js",
+          "duration": 53.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/LensDroplets.js",
+          "duration": 54.29999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/LensFlare.js",
+          "duration": 54.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/MotionBlur.js",
+          "duration": 54.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/Scatter.js?t=1790756857302",
+          "duration": 45.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/InstanceLOD.js",
+          "duration": 46,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/GrassField.js",
+          "duration": 46.10000002384186,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/VegNodes.js",
+          "duration": 49.20000001788139,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/PlantGeometry.js",
+          "duration": 49.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/VegMaterials.js",
+          "duration": 49.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/Impostors.js",
+          "duration": 49.39999997615814,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/LeafTextures.js",
+          "duration": 49.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/audio/soundBank.js",
+          "duration": 49.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/MathUtils.js",
+          "duration": 52.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Vector2.js",
+          "duration": 52.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Vector3.js",
+          "duration": 52.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Vector4.js",
+          "duration": 52.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Quaternion.js",
+          "duration": 52.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Euler.js",
+          "duration": 52.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Matrix3.js",
+          "duration": 56,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Matrix4.js",
+          "duration": 56.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Color.js",
+          "duration": 56.20000001788139,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Box3.js",
+          "duration": 56.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Sphere.js",
+          "duration": 56.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Plane.js",
+          "duration": 56.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Frustum.js",
+          "duration": 59.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Ray.js",
+          "duration": 59.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Spherical.js",
+          "duration": 59.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/CatmullRomCurve3.js",
+          "duration": 60,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/ShapeUtils.js",
+          "duration": 60.10000002384186,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Timer.js",
+          "duration": 60.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Object3D.js",
+          "duration": 60.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Layers.js",
+          "duration": 60.39999997615814,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Group.js",
+          "duration": 60.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Camera.js",
+          "duration": 60.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/BufferAttribute.js",
+          "duration": 59.79999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/BufferGeometry.js",
+          "duration": 59.79999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/PrimitiveGeometries.js",
+          "duration": 62.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/PolyhedronGeometry.js",
+          "duration": 62.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/TubeGeometry.js",
+          "duration": 62.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/RoundedBoxGeometry.js",
+          "duration": 62.79999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/BufferGeometryUtils.js",
+          "duration": 62.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/MeshRenderer.js",
+          "duration": 58.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Skinning.js",
+          "duration": 60.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/loaders/GLTF.js",
+          "duration": 61.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishProps.js",
+          "duration": 46.29999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishSpecies.js",
+          "duration": 42.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishGeometry.js",
+          "duration": 42.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/CreatureGeometry.js",
+          "duration": 42.79999998211861,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishMaterial.js",
+          "duration": 45.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/GLB.js",
+          "duration": 38.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/BirdShapes.js",
+          "duration": 38.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Kit.js",
+          "duration": 39,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Flight.js",
+          "duration": 38.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/BirdPose.js",
+          "duration": 39,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/CritterShapes.js",
+          "duration": 38.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/GeoBuilder.js",
+          "duration": 28.600000023841858,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/MeshShader.js",
+          "duration": 9.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/clouds/baseShape64.bin",
+          "duration": 5.700000017881393,
+          "transferSize": 908587,
+          "encodedBodySize": 908287
+        },
+        {
+          "name": "http://127.0.0.1:5191/clouds/blueNoise.bin",
+          "duration": 2.399999976158142,
+          "transferSize": 4396,
+          "encodedBodySize": 4096
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk.glb",
+          "duration": 3.2000000178813934,
+          "transferSize": 128944,
+          "encodedBodySize": 128644
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02.glb",
+          "duration": 7,
+          "transferSize": 106944,
+          "encodedBodySize": 106644
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01.glb",
+          "duration": 4.600000023841858,
+          "transferSize": 107868,
+          "encodedBodySize": 107568
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell.glb",
+          "duration": 4.5,
+          "transferSize": 64576,
+          "encodedBodySize": 64276
+        },
+        {
+          "name": "http://127.0.0.1:5191/favicon.ico",
+          "duration": 1.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback.json",
+          "duration": 2.2999999821186066,
+          "transferSize": 4406,
+          "encodedBodySize": 4106
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback.bin",
+          "duration": 23.69999998807907,
+          "transferSize": 3469716,
+          "encodedBodySize": 3469416
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk_albedo.jpg",
+          "duration": 8.199999988079071,
+          "transferSize": 769013,
+          "encodedBodySize": 768713
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk_normal.jpg",
+          "duration": 7.800000011920929,
+          "transferSize": 573541,
+          "encodedBodySize": 573241
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell_albedo.jpg",
+          "duration": 8,
+          "transferSize": 785969,
+          "encodedBodySize": 785669
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01_albedo.jpg",
+          "duration": 8.099999994039536,
+          "transferSize": 721003,
+          "encodedBodySize": 720703
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02_albedo.jpg",
+          "duration": 8.199999988079071,
+          "transferSize": 617573,
+          "encodedBodySize": 617273
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02_normal.jpg",
+          "duration": 24.30000001192093,
+          "transferSize": 737643,
+          "encodedBodySize": 737343
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01_normal.jpg",
+          "duration": 26.30000001192093,
+          "transferSize": 1023790,
+          "encodedBodySize": 1023490
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell_normal.jpg",
+          "duration": 36.5,
+          "transferSize": 582508,
+          "encodedBodySize": 582208
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk_arm.jpg",
+          "duration": 20.599999994039536,
+          "transferSize": 514514,
+          "encodedBodySize": 514214
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02_arm.jpg",
+          "duration": 20.80000001192093,
+          "transferSize": 501650,
+          "encodedBodySize": 501350
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01_arm.jpg",
+          "duration": 34.80000001192093,
+          "transferSize": 595328,
+          "encodedBodySize": 595028
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell_arm.jpg",
+          "duration": 35,
+          "transferSize": 567763,
+          "encodedBodySize": 567463
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback_albedo.png",
+          "duration": 19.799999982118607,
+          "transferSize": 4289986,
+          "encodedBodySize": 4289686
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback_height.png",
+          "duration": 103.19999998807907,
+          "transferSize": 12896317,
+          "encodedBodySize": 12896017
+        },
+        {
+          "name": "http://127.0.0.1:5191/textures/smaa/area.png",
+          "duration": 2.4000000059604645,
+          "transferSize": 33503,
+          "encodedBodySize": 33203
+        },
+        {
+          "name": "http://127.0.0.1:5191/textures/smaa/search.png",
+          "duration": 2.199999988079071,
+          "transferSize": 413,
+          "encodedBodySize": 113
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Bench.js",
+          "duration": 4.800000011920929,
+          "transferSize": 65405,
+          "encodedBodySize": 65105
+        }
+      ]
+    },
+    "warmReload": {
+      "stages": [
+        {
+          "status": "Starting…",
+          "ms": 213.5
+        },
+        {
+          "status": "Starting WebGPU…",
+          "ms": 327.40000000596046
+        },
+        {
+          "status": "Building the atmosphere…",
+          "ms": 389.19999998807907
+        },
+        {
+          "status": "Shaping the island…",
+          "ms": 413
+        },
+        {
+          "status": "Building the village…",
+          "ms": 1917.4000000059605
+        },
+        {
+          "status": "Planting the island…",
+          "ms": 2011.800000011921
+        },
+        {
+          "status": "Rolling in the swell…",
+          "ms": 2931.9000000059605
+        },
+        {
+          "status": "Growing the reef…",
+          "ms": 3652.199999988079
+        },
+        {
+          "status": "Simulating the ocean…",
+          "ms": 4758.4000000059605
+        },
+        {
+          "status": "Preparing the shaders…",
+          "ms": 5617.199999988079
+        },
+        {
+          "status": "Compiling shaders…",
+          "ms": 5622.5999999940395
+        },
+        {
+          "status": "Warming up…",
+          "ms": 12095.199999988079
+        },
+        {
+          "status": "Ready",
+          "ms": 12271.699999988079
+        }
+      ],
+      "navigationStart": 1790756951614.3,
+      "domContentLoadedMs": 327.40000000596046,
+      "windowLoadMs": 331.09999999403954,
+      "appReadyMs": 12271.699999988079,
+      "loaderFadeStartMs": 12271.699999988079,
+      "firstActionableMs": 13206.699999988079,
+      "navigation": {
+        "name": "http://127.0.0.1:5191/?bench=&scale=1",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 331.09999999403954,
+        "navigationId": 618,
+        "initiatorType": "navigation",
+        "deliveryType": "cache",
+        "nextHopProtocol": "",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.5,
+        "domainLookupStart": 0.5,
+        "domainLookupEnd": 0.5,
+        "connectStart": 0.5,
+        "secureConnectionStart": 0,
+        "connectEnd": 0.5,
+        "requestStart": 1.199999988079071,
+        "responseStart": 4.5,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 4.5,
+        "responseEnd": 4.9000000059604645,
+        "transferSize": 300,
+        "encodedBodySize": 3845,
+        "decodedBodySize": 3845,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 9.699999988079071,
+        "unloadEventEnd": 9.699999988079071,
+        "domInteractive": 213.59999999403954,
+        "domContentLoadedEventStart": 327.40000000596046,
+        "domContentLoadedEventEnd": 327.5,
+        "domComplete": 331,
+        "loadEventStart": 331.09999999403954,
+        "loadEventEnd": 331.09999999403954,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:5191/ui/keyart-720.jpg",
+          "duration": 1.5999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/@vite/client",
+          "duration": 2.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 210769
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/ui.css",
+          "duration": 1.600000023841858,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat+Brush&family=Kalam:wght@400;700&display=swap",
+          "duration": 0,
+          "transferSize": 0,
+          "encodedBodySize": 1144
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/main.js?t=1790756903219",
+          "duration": 1.7999999821186066,
+          "transferSize": 300,
+          "encodedBodySize": 12628
+        },
+        {
+          "name": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+          "duration": 0,
+          "transferSize": 0,
+          "encodedBodySize": 48256
+        },
+        {
+          "name": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2",
+          "duration": 0,
+          "transferSize": 0,
+          "encodedBodySize": 31432
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/BenchSeed.js",
+          "duration": 2.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 3613
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/AppUI.js",
+          "duration": 3.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 99400
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/App.js?t=1790756903219",
+          "duration": 3.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 175486
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/UI.js",
+          "duration": 4,
+          "transferSize": 300,
+          "encodedBodySize": 653499
+        },
+        {
+          "name": "http://127.0.0.1:5191/node_modules/vite/dist/client/env.mjs",
+          "duration": 3,
+          "transferSize": 300,
+          "encodedBodySize": 3478
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/index.js",
+          "duration": 2.5999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 2746
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Globals.js",
+          "duration": 2.800000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 1009
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/GroundBounce.js",
+          "duration": 3.5,
+          "transferSize": 300,
+          "encodedBodySize": 52212
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/GPU.js",
+          "duration": 3.899999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 50927
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Frame.js",
+          "duration": 4.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 33222
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Shadows.js",
+          "duration": 4.4000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 41162
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Input.js",
+          "duration": 5.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 13866
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Engine.js",
+          "duration": 5,
+          "transferSize": 300,
+          "encodedBodySize": 432
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/CDLOD.js",
+          "duration": 5.4000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 64439
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Profiler.js",
+          "duration": 7.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 30940
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/SceneRenderer.js",
+          "duration": 7.200000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 541
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/SceneRenderer.js",
+          "duration": 7.5999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 36720
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/DebugViews.js",
+          "duration": 8.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 25012
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Atmosphere.js",
+          "duration": 10.700000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 116836
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Sky.js",
+          "duration": 10.700000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 67453
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Clouds.js",
+          "duration": 20.5,
+          "transferSize": 300,
+          "encodedBodySize": 495872
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Environment.js",
+          "duration": 11.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 79194
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/SkyProClouds.js",
+          "duration": 15.399999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 303811
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/TerrainData.js?t=1790756857314",
+          "duration": 14.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 257466
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/WorldLayout.js?t=1790756857252",
+          "duration": 11.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 8326
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/TerrainGPU.js",
+          "duration": 12.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 74718
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/ShoreField.js",
+          "duration": 11.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 51112
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Terrain.js?t=1790756857252",
+          "duration": 15.800000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 234117
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Colliders.js",
+          "duration": 11.600000023841858,
+          "transferSize": 300,
+          "encodedBodySize": 29337
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Village.js?t=1790756857252",
+          "duration": 13.5,
+          "transferSize": 300,
+          "encodedBodySize": 94880
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/BoatModel.js",
+          "duration": 15.399999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 83600
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Rocks.js?t=1790756857252",
+          "duration": 15.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 115441
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Debris.js?t=1790756857314",
+          "duration": 14.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 54681
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Reef.js?t=1790756857252",
+          "duration": 23.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 432968
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Wildlife.js?t=1790756857252",
+          "duration": 14.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 30127
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/marine/Whale.js",
+          "duration": 16.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 127674
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/OceanFFT.js",
+          "duration": 18.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 149506
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WaterSurface.js",
+          "duration": 16.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 100999
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WaterMaterial.js",
+          "duration": 21.5,
+          "transferSize": 300,
+          "encodedBodySize": 218091
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/FoamTexture.js",
+          "duration": 15.899999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 26464
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/ShoreWaves.js",
+          "duration": 22.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 213143
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/ShoreSim.js",
+          "duration": 18.399999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 69276
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/Caustics.js",
+          "duration": 18.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 82449
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/UnderwaterLighting.js",
+          "duration": 18.899999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 82306
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/RefractionPass.js",
+          "duration": 17.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 41419
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WaterQuery.js",
+          "duration": 18.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 46599
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/SurfFoam.js",
+          "duration": 23.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 143123
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/LocalLights.js",
+          "duration": 20.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 75767
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/Breakers.js",
+          "duration": 24,
+          "transferSize": 300,
+          "encodedBodySize": 247729
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/fx/Spray.js",
+          "duration": 24.700000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 223874
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/fx/MarineSnow.js",
+          "duration": 20.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 43790
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/SeaDetail.js",
+          "duration": 20.600000023841858,
+          "transferSize": 300,
+          "encodedBodySize": 39974
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/fx/AirMotes.js",
+          "duration": 22.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 70776
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/Underwater.js",
+          "duration": 22.5,
+          "transferSize": 300,
+          "encodedBodySize": 109324
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/AirHaze.js",
+          "duration": 26,
+          "transferSize": 300,
+          "encodedBodySize": 152580
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/PostFX.js",
+          "duration": 25.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 188358
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/FlyCamera.js",
+          "duration": 22.19999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 10752
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/BoatSpray.js",
+          "duration": 25.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 90193
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/BoatController.js?t=1790756857252",
+          "duration": 27.299999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 133848
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/Player.js?t=1790756857252",
+          "duration": 27.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 155796
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WakeSim.js",
+          "duration": 27.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 263352
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Vegetation.js?t=1790756857302",
+          "duration": 26.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 78517
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/CameraVelocity.js",
+          "duration": 25.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 10650
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/audio/SoundScape.js?t=1790756857252",
+          "duration": 28,
+          "transferSize": 300,
+          "encodedBodySize": 316670
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/icons.js",
+          "duration": 25.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 61271
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/index.js",
+          "duration": 15.299999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 6716
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/index.js",
+          "duration": 16,
+          "transferSize": 300,
+          "encodedBodySize": 2352
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/index.js",
+          "duration": 16.299999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 4666
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/core/EventDispatcher.js",
+          "duration": 16.299999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 5865
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/constants.js",
+          "duration": 16.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 2712
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Texture.js",
+          "duration": 10.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 52092
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Shader.js",
+          "duration": 12.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 132361
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/SceneLighting.js",
+          "duration": 11.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 5247
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/wgsl/common.js",
+          "duration": 11.800000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 79565
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Compute.js",
+          "duration": 11,
+          "transferSize": 300,
+          "encodedBodySize": 17172
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Uniforms.js",
+          "duration": 5.5,
+          "transferSize": 300,
+          "encodedBodySize": 54230
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/wgsl/lighting.js",
+          "duration": 5.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 125359
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/Engine.js",
+          "duration": 4.5999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 13758
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/webgpu.js",
+          "duration": 4.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 7438
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Mesh.js",
+          "duration": 5.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 19850
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Scene.js",
+          "duration": 5.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 6372
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Material.js",
+          "duration": 5.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 62478
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/FullscreenPass.js",
+          "duration": 5.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 23851
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Mipmaps.js",
+          "duration": 8.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 18374
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/ComputeMips.js",
+          "duration": 8.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 27605
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/DetailTextures.js",
+          "duration": 9.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 55134
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/TerrainBake.js",
+          "duration": 9.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 49320
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Readback.js",
+          "duration": 9.5,
+          "transferSize": 300,
+          "encodedBodySize": 21666
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/TerrainShading.js",
+          "duration": 10,
+          "transferSize": 300,
+          "encodedBodySize": 80954
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/Materials.js",
+          "duration": 9.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 28434
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/util/Noise.js",
+          "duration": 9.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 20324
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/TextureBaker.js",
+          "duration": 14.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 208774
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/VillageMaterials.js",
+          "duration": 14.5,
+          "transferSize": 300,
+          "encodedBodySize": 220890
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/GeoBuilder.js",
+          "duration": 13.5,
+          "transferSize": 300,
+          "encodedBodySize": 185592
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/Boardwalk.js",
+          "duration": 12,
+          "transferSize": 300,
+          "encodedBodySize": 40600
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/Buildings.js",
+          "duration": 16,
+          "transferSize": 300,
+          "encodedBodySize": 439234
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Pier.js?t=1790756857252",
+          "duration": 14.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 211016
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Props.js",
+          "duration": 15.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 296271
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/TerrainNoise.js",
+          "duration": 13.100000023841858,
+          "transferSize": 300,
+          "encodedBodySize": 45934
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/IslandShape.js?t=1790756857314",
+          "duration": 15.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 34645
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/HullLines.js",
+          "duration": 11.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 126129
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/GeoKit.js",
+          "duration": 11.5,
+          "transferSize": 300,
+          "encodedBodySize": 103295
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/BoatMaterials.js",
+          "duration": 12.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 182359
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/Running.js",
+          "duration": 12.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 35692
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/DeckGear.js",
+          "duration": 13.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 122498
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/HullBuilder.js",
+          "duration": 12.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 125394
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/Wheelhouse.js",
+          "duration": 15.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 294587
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/LODFade.js",
+          "duration": 12.200000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 14016
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/RockGeometry.js",
+          "duration": 12,
+          "transferSize": 300,
+          "encodedBodySize": 43930
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/NatureMaterial.js",
+          "duration": 13.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 89754
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/PebbleField.js",
+          "duration": 13.800000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 105466
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/DebrisPlacement.js?t=1790756857314",
+          "duration": 17,
+          "transferSize": 300,
+          "encodedBodySize": 321501
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/ScannedDebris.js",
+          "duration": 15,
+          "transferSize": 300,
+          "encodedBodySize": 76382
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/DebrisShapes.js",
+          "duration": 17.700000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 347214
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/BirdBatch.js",
+          "duration": 14.399999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 118384
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Birds.js?t=1790756857252",
+          "duration": 16.5,
+          "transferSize": 300,
+          "encodedBodySize": 231056
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/CritterBatch.js",
+          "duration": 14.5,
+          "transferSize": 300,
+          "encodedBodySize": 78002
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Crabs.js?t=1790756857252",
+          "duration": 16.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 142162
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/ShadowBlobs.js",
+          "duration": 14.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 22982
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/SwashProbe.js",
+          "duration": 14.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 25188
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Shorebirds.js?t=1790756857252",
+          "duration": 15.800000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 90399
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/marine/WhaleBrain.js",
+          "duration": 15.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 113024
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/marine/WhaleTextures.js",
+          "duration": 14.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 19050
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WhaleWater.js",
+          "duration": 7.200000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 40805
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefBatch.js",
+          "duration": 5.5999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 84678
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefGeometry.js",
+          "duration": 7.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 527774
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefNoise.js",
+          "duration": 4.9000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 22672
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefMaterials.js?t=1790756857252",
+          "duration": 5.9000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 181425
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Fish.js?t=1790756857252",
+          "duration": 6.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 397146
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/DataUtils.js",
+          "duration": 2.899999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 7960
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/GTAO.js",
+          "duration": 2.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 83119
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/AntiAlias.js",
+          "duration": 3.4000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 84885
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/LensDroplets.js",
+          "duration": 3.2000000178813934,
+          "transferSize": 300,
+          "encodedBodySize": 36334
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/TemporalUpscale.js",
+          "duration": 3.7000000178813934,
+          "transferSize": 300,
+          "encodedBodySize": 175767
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/LensFlare.js",
+          "duration": 3.399999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 62765
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/MotionBlur.js",
+          "duration": 4,
+          "transferSize": 300,
+          "encodedBodySize": 77222
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/Scatter.js?t=1790756857302",
+          "duration": 5.200000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 206174
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/InstanceLOD.js",
+          "duration": 4.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 73418
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/GrassField.js",
+          "duration": 5.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 216922
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/VegNodes.js",
+          "duration": 8.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 79470
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/VegMaterials.js",
+          "duration": 13.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 266828
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/PlantGeometry.js",
+          "duration": 13.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 334292
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/Impostors.js",
+          "duration": 11.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 91022
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/LeafTextures.js",
+          "duration": 9.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 39433
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/MathUtils.js",
+          "duration": 9.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 25326
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Vector2.js",
+          "duration": 10.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 30127
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Vector3.js",
+          "duration": 10.5,
+          "transferSize": 300,
+          "encodedBodySize": 59338
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Vector4.js",
+          "duration": 12.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 37205
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Quaternion.js",
+          "duration": 12.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 55657
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Euler.js",
+          "duration": 13.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 25997
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Matrix3.js",
+          "duration": 13.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 31827
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Box3.js",
+          "duration": 13.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 34524
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Color.js",
+          "duration": 13.700000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 47429
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Matrix4.js",
+          "duration": 14.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 101707
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Sphere.js",
+          "duration": 14.700000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 17521
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Plane.js",
+          "duration": 14.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 13046
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Frustum.js",
+          "duration": 15.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 21950
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Ray.js",
+          "duration": 15.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 25521
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Spherical.js",
+          "duration": 15.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 6126
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/CatmullRomCurve3.js",
+          "duration": 15.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 48577
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/ShapeUtils.js",
+          "duration": 15.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 43357
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Timer.js",
+          "duration": 15.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 10111
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/audio/soundBank.js",
+          "duration": 15.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 42838
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Object3D.js",
+          "duration": 15.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 62000
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Layers.js",
+          "duration": 15.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 3670
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Group.js",
+          "duration": 15.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 1440
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Camera.js",
+          "duration": 16.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 41702
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/BufferAttribute.js",
+          "duration": 14.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 50041
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/TubeGeometry.js",
+          "duration": 15,
+          "transferSize": 300,
+          "encodedBodySize": 13376
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/PolyhedronGeometry.js",
+          "duration": 14.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 30114
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/BufferGeometry.js",
+          "duration": 14.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 68984
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/PrimitiveGeometries.js",
+          "duration": 15,
+          "transferSize": 300,
+          "encodedBodySize": 89293
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/BufferGeometryUtils.js",
+          "duration": 15.299999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 29061
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/RoundedBoxGeometry.js",
+          "duration": 15.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 24780
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/MeshRenderer.js",
+          "duration": 11.800000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 145740
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Skinning.js",
+          "duration": 11.5,
+          "transferSize": 300,
+          "encodedBodySize": 115230
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/loaders/GLTF.js",
+          "duration": 11.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 52967
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishProps.js",
+          "duration": 9.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 128157
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/GLB.js",
+          "duration": 8.799999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 32515
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/CritterShapes.js",
+          "duration": 9.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 66826
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Kit.js",
+          "duration": 9.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 37090
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/BirdShapes.js",
+          "duration": 11.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 147118
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Flight.js",
+          "duration": 9.700000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 50986
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/BirdPose.js",
+          "duration": 9.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 46842
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishSpecies.js",
+          "duration": 12,
+          "transferSize": 300,
+          "encodedBodySize": 213900
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/CreatureGeometry.js",
+          "duration": 11.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 73446
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishGeometry.js",
+          "duration": 11.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 186217
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishMaterial.js",
+          "duration": 12.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 248049
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/GeoBuilder.js",
+          "duration": 1.7999999821186066,
+          "transferSize": 300,
+          "encodedBodySize": 17831
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/MeshShader.js",
+          "duration": 1.2000000178813934,
+          "transferSize": 300,
+          "encodedBodySize": 78987
+        },
+        {
+          "name": "http://127.0.0.1:5191/clouds/baseShape64.bin",
+          "duration": 2.5999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 908287
+        },
+        {
+          "name": "http://127.0.0.1:5191/clouds/blueNoise.bin",
+          "duration": 1.7999999821186066,
+          "transferSize": 300,
+          "encodedBodySize": 4096
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk.glb",
+          "duration": 2.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 128644
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02.glb",
+          "duration": 2.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 106644
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01.glb",
+          "duration": 2.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 107568
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell.glb",
+          "duration": 2.5,
+          "transferSize": 300,
+          "encodedBodySize": 64276
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback.json",
+          "duration": 1.5999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 4106
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback.bin",
+          "duration": 17.600000023841858,
+          "transferSize": 300,
+          "encodedBodySize": 3469416
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02_albedo.jpg",
+          "duration": 10.5,
+          "transferSize": 300,
+          "encodedBodySize": 617273
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk_albedo.jpg",
+          "duration": 11.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 768713
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01_albedo.jpg",
+          "duration": 11.800000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 720703
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell_albedo.jpg",
+          "duration": 12.200000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 785669
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk_normal.jpg",
+          "duration": 10.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 573241
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02_normal.jpg",
+          "duration": 12.299999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 737343
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01_normal.jpg",
+          "duration": 12.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 1023490
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk_arm.jpg",
+          "duration": 10.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 514214
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell_normal.jpg",
+          "duration": 11.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 582208
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02_arm.jpg",
+          "duration": 11.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 501350
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell_arm.jpg",
+          "duration": 11.699999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 567463
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01_arm.jpg",
+          "duration": 11.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 595028
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback_albedo.png",
+          "duration": 7.9000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 4289686
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback_height.png",
+          "duration": 33.900000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 12896017
+        },
+        {
+          "name": "http://127.0.0.1:5191/textures/smaa/area.png",
+          "duration": 1.9000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 33203
+        },
+        {
+          "name": "http://127.0.0.1:5191/textures/smaa/search.png",
+          "duration": 2.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 113
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Bench.js",
+          "duration": 4.5999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 65105
+        }
+      ]
+    }
+  },
+  "console": [
+    {
+      "type": "warning",
+      "text": "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+      "location": {
+        "url": "http://127.0.0.1:5191/src/engine/gpu/GPU.js",
+        "line": 30,
+        "column": 0,
+        "lineNumber": 30,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+      "location": {
+        "url": "http://127.0.0.1:5191/src/engine/gpu/GPU.js",
+        "line": 30,
+        "column": 0,
+        "lineNumber": 30,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "location": {
+        "url": "http://127.0.0.1:5191/favicon.ico",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "ShoreWaves.buildDirTexture: no shore field data on the terrain; using terrainShoreSample instead",
+      "location": {
+        "url": "http://127.0.0.1:5191/@vite/client",
+        "line": 298,
+        "column": 3,
+        "lineNumber": 298,
+        "columnNumber": 3
+      }
+    },
+    {
+      "type": "warning",
+      "text": "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+      "location": {
+        "url": "http://127.0.0.1:5191/src/engine/gpu/GPU.js",
+        "line": 30,
+        "column": 0,
+        "lineNumber": 30,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "ShoreWaves.buildDirTexture: no shore field data on the terrain; using terrainShoreSample instead",
+      "location": {
+        "url": "http://127.0.0.1:5191/@vite/client",
+        "line": 298,
+        "column": 3,
+        "lineNumber": 298,
+        "columnNumber": 3
+      }
+    }
+  ],
+  "pageErrors": [],
+  "requestsFailed": [],
+  "httpErrors": [],
+  "browserExecutable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "playwrightModule": "E:\\game\\3D布娃娃物理喜剧\\node_modules\\playwright-core\\index.mjs",
+  "profile": "E:\\test\\3Dmodel\\output\\crescent-review\\stage2-settlement\\browser-profile-1790756907297",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.58",
+    "revision": "@a654841425914cbb703a2931e07b70a83aedbafd",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.11"
+  },
+  "gpu": {
+    "vendor": "nvidia",
+    "architecture": "ampere",
+    "device": "",
+    "description": "",
+    "isFallbackAdapter": false,
+    "timestampQuery": true,
+    "format": "bgra8unorm",
+    "features": [
+      "float32-filterable",
+      "timestamp-query",
+      "rg11b10ufloat-renderable",
+      "float32-blendable",
+      "shader-f16",
+      "clip-distances"
+    ]
+  },
+  "screenshots": [
+    {
+      "name": "stage2-settlement-beach.png",
+      "width": 1280,
+      "height": 720,
+      "format": "bgra8unorm"
+    },
+    {
+      "name": "stage2-settlement-aerial.png",
+      "width": 1280,
+      "height": 720,
+      "format": "bgra8unorm"
+    },
+    {
+      "name": "stage2-settlement-village.png",
+      "width": 1280,
+      "height": 720,
+      "format": "bgra8unorm"
+    },
+    {
+      "name": "stage2-settlement-pier.png",
+      "width": 1280,
+      "height": 720,
+      "format": "bgra8unorm"
+    }
+  ],
+  "throughput": {
+    "beach": {
+      "wall": 6.095,
+      "gpu": 5.96,
+      "gpuMedian": 5.798,
+      "cpu": 1.657,
+      "passes": [
+        [
+          "water + transparent",
+          1.515
+        ],
+        [
+          "opaque",
+          1.03
+        ],
+        [
+          "Ocean FFT",
+          0.367
+        ],
+        [
+          "Clouds Trace",
+          0.305
+        ],
+        [
+          "TAAU",
+          0.296
+        ],
+        [
+          "haze march",
+          0.218
+        ],
+        [
+          "refraction",
+          0.217
+        ],
+        [
+          "causticsFine",
+          0.209
+        ],
+        [
+          "Clouds Panorama",
+          0.195
+        ],
+        [
+          "shadow cascade 0",
+          0.157
+        ],
+        [
+          "beauty (AO + haze + underwater)",
+          0.15
+        ],
+        [
+          "final (grade + tonemap)",
+          0.122
+        ],
+        [
+          "Shore Sim",
+          0.095
+        ],
+        [
+          "shadow cascade 1",
+          0.075
+        ],
+        [
+          "Underwater Light Map 1",
+          0.074
+        ],
+        [
+          "Underwater Light Map 0",
+          0.069
+        ],
+        [
+          "Surf Crests",
+          0.065
+        ],
+        [
+          "GTAO",
+          0.062
+        ],
+        [
+          "Clouds Resolve",
+          0.041
+        ],
+        [
+          "shadow cascade 2",
+          0.039
+        ],
+        [
+          "bloom down",
+          0.037
+        ],
+        [
+          "Motion Blur Tiles",
+          0.034
+        ],
+        [
+          "causticsBroad",
+          0.03
+        ],
+        [
+          "Auto Exposure",
+          0.027
+        ],
+        [
+          "bloom up",
+          0.025
+        ],
+        [
+          "Spray Update",
+          0.024
+        ],
+        [
+          "Water Queries",
+          0.024
+        ],
+        [
+          "Caustics Mips",
+          0.02
+        ],
+        [
+          "medium",
+          0.019
+        ],
+        [
+          "AO depth",
+          0.018
+        ],
+        [
+          "opaque depth half",
+          0.016
+        ],
+        [
+          "Clouds Shadow",
+          0.016
+        ],
+        [
+          "haze shafts temporal",
+          0.015
+        ],
+        [
+          "AO blur x",
+          0.015
+        ],
+        [
+          "AO blur y",
+          0.014
+        ],
+        [
+          "Lens Flare Visibility",
+          0.005
+        ],
+        [
+          "Atmosphere Irradiance",
+          0.004
+        ],
+        [
+          "Motion Blur Neighbourhood",
+          0.003
+        ],
+        [
+          "hull mask",
+          0.002
+        ],
+        [
+          "Swash Probe",
+          0.001
+        ]
+      ]
+    },
+    "aerial": {
+      "wall": 6.078,
+      "gpu": 5.952,
+      "gpuMedian": 5.734,
+      "cpu": 1.675,
+      "passes": [
+        [
+          "opaque",
+          1.655
+        ],
+        [
+          "water + transparent",
+          1.27
+        ],
+        [
+          "Ocean FFT",
+          0.379
+        ],
+        [
+          "refraction",
+          0.374
+        ],
+        [
+          "TAAU",
+          0.305
+        ],
+        [
+          "haze march",
+          0.232
+        ],
+        [
+          "Clouds Panorama",
+          0.21
+        ],
+        [
+          "causticsFine",
+          0.158
+        ],
+        [
+          "beauty (AO + haze + underwater)",
+          0.156
+        ],
+        [
+          "Shore Sim",
+          0.092
+        ],
+        [
+          "final (grade + tonemap)",
+          0.09
+        ],
+        [
+          "Underwater Light Map 1",
+          0.069
+        ],
+        [
+          "GTAO",
+          0.069
+        ],
+        [
+          "Surf Crests",
+          0.067
+        ],
+        [
+          "Underwater Light Map 0",
+          0.061
+        ],
+        [
+          "Clouds Resolve",
+          0.042
+        ],
+        [
+          "bloom down",
+          0.039
+        ],
+        [
+          "Motion Blur Tiles",
+          0.032
+        ],
+        [
+          "causticsBroad",
+          0.03
+        ],
+        [
+          "Auto Exposure",
+          0.028
+        ],
+        [
+          "bloom up",
+          0.026
+        ],
+        [
+          "Water Queries",
+          0.025
+        ],
+        [
+          "AO depth",
+          0.023
+        ],
+        [
+          "shadow cascade 2",
+          0.022
+        ],
+        [
+          "Spray Update",
+          0.02
+        ],
+        [
+          "shadow cascade 0",
+          0.02
+        ],
+        [
+          "Caustics Mips",
+          0.02
+        ],
+        [
+          "medium",
+          0.019
+        ],
+        [
+          "opaque depth half",
+          0.017
+        ],
+        [
+          "Clouds Shadow",
+          0.017
+        ],
+        [
+          "haze shafts temporal",
+          0.016
+        ],
+        [
+          "AO blur x",
+          0.015
+        ],
+        [
+          "shadow cascade 1",
+          0.015
+        ],
+        [
+          "AO blur y",
+          0.015
+        ],
+        [
+          "Clouds Trace",
+          0.005
+        ],
+        [
+          "Lens Flare Visibility",
+          0.005
+        ],
+        [
+          "Atmosphere Irradiance",
+          0.004
+        ],
+        [
+          "Motion Blur Neighbourhood",
+          0.003
+        ],
+        [
+          "hull mask",
+          0.001
+        ],
+        [
+          "Swash Probe",
+          0.001
+        ]
+      ]
+    },
+    "village": {
+      "wall": 6.48,
+      "gpu": 6.384,
+      "gpuMedian": 6.173,
+      "cpu": 1.35,
+      "passes": [
+        [
+          "opaque",
+          2.649
+        ],
+        [
+          "Ocean FFT",
+          0.38
+        ],
+        [
+          "Clouds Trace",
+          0.314
+        ],
+        [
+          "TAAU",
+          0.304
+        ],
+        [
+          "shadow cascade 0",
+          0.258
+        ],
+        [
+          "haze march",
+          0.227
+        ],
+        [
+          "Clouds Panorama",
+          0.21
+        ],
+        [
+          "causticsFine",
+          0.171
+        ],
+        [
+          "water + transparent",
+          0.166
+        ],
+        [
+          "beauty (AO + haze + underwater)",
+          0.165
+        ],
+        [
+          "shadow cascade 1",
+          0.16
+        ],
+        [
+          "GTAO",
+          0.124
+        ],
+        [
+          "final (grade + tonemap)",
+          0.119
+        ],
+        [
+          "refraction",
+          0.092
+        ],
+        [
+          "Shore Sim",
+          0.087
+        ],
+        [
+          "Surf Crests",
+          0.073
+        ],
+        [
+          "Underwater Light Map 1",
+          0.07
+        ],
+        [
+          "Underwater Light Map 0",
+          0.067
+        ],
+        [
+          "shadow cascade 2",
+          0.064
+        ],
+        [
+          "Clouds Resolve",
+          0.042
+        ],
+        [
+          "bloom down",
+          0.041
+        ],
+        [
+          "causticsBroad",
+          0.035
+        ],
+        [
+          "Motion Blur Tiles",
+          0.031
+        ],
+        [
+          "Water Queries",
+          0.026
+        ],
+        [
+          "bloom up",
+          0.026
+        ],
+        [
+          "opaque depth half",
+          0.026
+        ],
+        [
+          "Caustics Mips",
+          0.024
+        ],
+        [
+          "Auto Exposure",
+          0.023
+        ],
+        [
+          "AO depth",
+          0.022
+        ],
+        [
+          "Spray Update",
+          0.022
+        ],
+        [
+          "medium",
+          0.02
+        ],
+        [
+          "AO blur x",
+          0.017
+        ],
+        [
+          "Clouds Shadow",
+          0.017
+        ],
+        [
+          "haze shafts temporal",
+          0.015
+        ],
+        [
+          "AO blur y",
+          0.014
+        ],
+        [
+          "Lens Flare Visibility",
+          0.005
+        ],
+        [
+          "Atmosphere Irradiance",
+          0.003
+        ],
+        [
+          "Motion Blur Neighbourhood",
+          0.003
+        ],
+        [
+          "Swash Probe",
+          0.001
+        ],
+        [
+          "Env GGX 1",
+          0
+        ]
+      ]
+    },
+    "pier": {
+      "wall": 5.991,
+      "gpu": 5.848,
+      "gpuMedian": 5.651,
+      "cpu": 1.551,
+      "passes": [
+        [
+          "water + transparent",
+          1.367
+        ],
+        [
+          "opaque",
+          1.036
+        ],
+        [
+          "Ocean FFT",
+          0.382
+        ],
+        [
+          "refraction",
+          0.379
+        ],
+        [
+          "TAAU",
+          0.31
+        ],
+        [
+          "Clouds Trace",
+          0.309
+        ],
+        [
+          "haze march",
+          0.224
+        ],
+        [
+          "Clouds Panorama",
+          0.207
+        ],
+        [
+          "causticsFine",
+          0.171
+        ],
+        [
+          "beauty (AO + haze + underwater)",
+          0.147
+        ],
+        [
+          "final (grade + tonemap)",
+          0.116
+        ],
+        [
+          "Shore Sim",
+          0.087
+        ],
+        [
+          "shadow cascade 0",
+          0.078
+        ],
+        [
+          "Underwater Light Map 0",
+          0.072
+        ],
+        [
+          "Underwater Light Map 1",
+          0.071
+        ],
+        [
+          "Surf Crests",
+          0.067
+        ],
+        [
+          "shadow cascade 1",
+          0.051
+        ],
+        [
+          "Clouds Resolve",
+          0.042
+        ],
+        [
+          "bloom down",
+          0.04
+        ],
+        [
+          "causticsBroad",
+          0.032
+        ],
+        [
+          "Motion Blur Tiles",
+          0.028
+        ],
+        [
+          "GTAO",
+          0.027
+        ],
+        [
+          "shadow cascade 2",
+          0.027
+        ],
+        [
+          "bloom up",
+          0.026
+        ],
+        [
+          "Water Queries",
+          0.023
+        ],
+        [
+          "Auto Exposure",
+          0.021
+        ],
+        [
+          "Spray Update",
+          0.021
+        ],
+        [
+          "AO depth",
+          0.02
+        ],
+        [
+          "medium",
+          0.019
+        ],
+        [
+          "Caustics Mips",
+          0.018
+        ],
+        [
+          "Clouds Shadow",
+          0.017
+        ],
+        [
+          "opaque depth half",
+          0.016
+        ],
+        [
+          "haze shafts temporal",
+          0.015
+        ],
+        [
+          "AO blur x",
+          0.015
+        ],
+        [
+          "AO blur y",
+          0.015
+        ],
+        [
+          "Lens Flare Visibility",
+          0.005
+        ],
+        [
+          "Atmosphere Irradiance",
+          0.003
+        ],
+        [
+          "Motion Blur Neighbourhood",
+          0.003
+        ],
+        [
+          "Swash Probe",
+          0.001
+        ],
+        [
+          "Env GGX 1",
+          0
+        ]
+      ]
+    },
+    "total": {
+      "wall": 24.644,
+      "gpu": 24.144
+    }
+  },
+  "animationFrameLoop": {
+    "beach": {
+      "renderedFrames": 180,
+      "intervalCount": 179,
+      "durationMs": 2983.5,
+      "fps": 59.99664823194235,
+      "meanFrameMs": 16.66759776536313,
+      "medianFrameMs": 16.69999998807907,
+      "p95FrameMs": 16.80000001192093,
+      "intervalsMs": [
+        16.69999998807907,
+        16.69999998807907,
+        16.600000023841858,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.69999998807907,
+        16.600000023841858,
+        16.799999982118607,
+        16.5,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.700000017881393,
+        16.799999982118607,
+        16.700000017881393,
+        16.5,
+        16.799999982118607,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.5,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.899999976158142,
+        16.5,
+        16.600000023841858,
+        16.599999994039536,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.600000023841858,
+        16.599999994039536,
+        16.69999998807907,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.69999998807907,
+        16.600000023841858,
+        16.599999994039536,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.900000005960464,
+        16.599999994039536,
+        16.599999994039536,
+        16.80000001192093,
+        16.69999998807907,
+        16.400000005960464,
+        16.599999994039536,
+        16.599999994039536,
+        16.80000001192093,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.799999982118607,
+        16.5,
+        16.700000017881393,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.799999982118607,
+        16.5,
+        16.80000001192093,
+        16.69999998807907,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.5,
+        16.700000017881393,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.80000001192093,
+        16.799999982118607,
+        16.599999994039536,
+        16.5,
+        16.80000001192093,
+        16.5,
+        16.80000001192093,
+        16.5,
+        16.799999982118607,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.799999982118607,
+        16.700000017881393,
+        16.799999982118607,
+        16.5,
+        16.600000023841858,
+        16.599999994039536,
+        16.799999982118607,
+        16.600000023841858,
+        16.599999994039536,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.799999982118607,
+        16.700000017881393,
+        16.799999982118607,
+        16.30000001192093,
+        16.69999998807907,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.80000001192093,
+        16.400000005960464,
+        16.69999998807907,
+        16.69999998807907,
+        16.600000023841858,
+        16.799999982118607,
+        16.700000017881393,
+        16.5,
+        16.799999982118607,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.600000023841858,
+        16.799999982118607,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.80000001192093,
+        16.5,
+        16.799999982118607,
+        16.600000023841858,
+        16.69999998807907,
+        16.80000001192093
+      ]
+    },
+    "aerial": {
+      "renderedFrames": 180,
+      "intervalCount": 179,
+      "durationMs": 2983.0999999940395,
+      "fps": 60.00469310460851,
+      "meanFrameMs": 16.66536312845832,
+      "medianFrameMs": 16.69999998807907,
+      "p95FrameMs": 16.80000001192093,
+      "intervalsMs": [
+        16.5,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.80000001192093,
+        16.69999998807907,
+        16.69999998807907,
+        16.5,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.700000017881393,
+        16.5,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.799999982118607,
+        16.5,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.799999982118607,
+        16.400000005960464,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.799999982118607,
+        16.599999994039536,
+        16.600000023841858,
+        16.799999982118607,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.5,
+        16.80000001192093,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.400000005960464,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.69999998807907,
+        16.80000001192093,
+        16.400000005960464,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.69999998807907,
+        16.600000023841858,
+        16.599999994039536,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.69999998807907,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.69999998807907,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.600000023841858,
+        16.599999994039536,
+        16.799999982118607,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.900000005960464,
+        16.299999982118607,
+        16.80000001192093,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.599999994039536,
+        16.900000005960464,
+        16.599999994039536,
+        16.600000023841858,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.600000023841858,
+        16.799999982118607,
+        16.599999994039536,
+        16.5,
+        16.80000001192093,
+        16.69999998807907,
+        16.5,
+        16.80000001192093,
+        16.599999994039536,
+        16.80000001192093,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.5,
+        16.700000017881393,
+        16.599999994039536,
+        16.799999982118607,
+        16.700000017881393,
+        16.5,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.400000005960464,
+        16.799999982118607,
+        16.700000017881393,
+        16.599999994039536,
+        16.799999982118607,
+        16.600000023841858,
+        16.69999998807907,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.799999982118607,
+        16.599999994039536,
+        16.700000017881393,
+        16.5,
+        16.69999998807907,
+        16.599999994039536,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.80000001192093,
+        16.69999998807907,
+        16.600000023841858,
+        16.599999994039536,
+        16.799999982118607,
+        16.600000023841858,
+        16.599999994039536
+      ]
+    },
+    "village": {
+      "renderedFrames": 180,
+      "intervalCount": 179,
+      "durationMs": 2983.300000011921,
+      "fps": 60.00067039831218,
+      "meanFrameMs": 16.666480446993972,
+      "medianFrameMs": 16.69999998807907,
+      "p95FrameMs": 16.899999976158142,
+      "intervalsMs": [
+        16.700000017881393,
+        16.599999994039536,
+        16.599999994039536,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.599999994039536,
+        16.900000005960464,
+        16.5,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.5,
+        16.599999994039536,
+        16.69999998807907,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.600000023841858,
+        16.799999982118607,
+        16.700000017881393,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.5,
+        16.900000005960464,
+        16.5,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.599999994039536,
+        16.69999998807907,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.599999994039536,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.600000023841858,
+        16.899999976158142,
+        16.400000005960464,
+        16.700000017881393,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.900000005960464,
+        16.5,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.599999994039536,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.700000017881393,
+        16.5,
+        16.69999998807907,
+        16.80000001192093,
+        16.69999998807907,
+        16.5,
+        16.80000001192093,
+        16.5,
+        16.899999976158142,
+        16.5,
+        17,
+        16.30000001192093,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.600000023841858,
+        16.69999998807907,
+        16.80000001192093,
+        16.5,
+        16.799999982118607,
+        16.700000017881393,
+        16.599999994039536,
+        16.799999982118607,
+        16.5,
+        16.80000001192093,
+        16.69999998807907,
+        16.5,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.600000023841858,
+        16.799999982118607,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.69999998807907,
+        16.5,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.5,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.80000001192093,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.5,
+        16.799999982118607,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.5,
+        16.80000001192093,
+        16.69999998807907,
+        16.700000017881393,
+        18.69999998807907,
+        14.599999994039536,
+        16.599999994039536,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.80000001192093,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.5,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.600000023841858,
+        16.69999998807907,
+        16.900000005960464,
+        16.5,
+        16.69999998807907,
+        16.900000005960464,
+        16.400000005960464
+      ]
+    },
+    "pier": {
+      "renderedFrames": 180,
+      "intervalCount": 179,
+      "durationMs": 2983.4000000059605,
+      "fps": 59.998659247718166,
+      "meanFrameMs": 16.66703910617855,
+      "medianFrameMs": 16.69999998807907,
+      "p95FrameMs": 16.80000001192093,
+      "intervalsMs": [
+        16.69999998807907,
+        16.700000017881393,
+        16.5,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.69999998807907,
+        16.600000023841858,
+        16.599999994039536,
+        16.799999982118607,
+        16.600000023841858,
+        16.69999998807907,
+        16.69999998807907,
+        16.5,
+        16.80000001192093,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.5,
+        16.80000001192093,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.5,
+        16.69999998807907,
+        16.600000023841858,
+        16.899999976158142,
+        16.5,
+        16.80000001192093,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.69999998807907,
+        16.600000023841858,
+        16.599999994039536,
+        16.599999994039536,
+        16.80000001192093,
+        16.5,
+        16.799999982118607,
+        16.80000001192093,
+        16.5,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.69999998807907,
+        16.700000017881393,
+        16.5,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.80000001192093,
+        16.599999994039536,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.799999982118607,
+        16.400000005960464,
+        16.80000001192093,
+        16.69999998807907,
+        16.80000001192093,
+        16.5,
+        16.799999982118607,
+        16.5,
+        16.600000023841858,
+        16.799999982118607,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.80000001192093,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.599999994039536,
+        16.900000005960464,
+        16.400000005960464,
+        16.799999982118607,
+        16.5,
+        16.700000017881393,
+        16.799999982118607,
+        16.600000023841858,
+        16.599999994039536,
+        16.69999998807907,
+        16.700000017881393,
+        16.599999994039536,
+        16.799999982118607,
+        16.5,
+        16.700000017881393,
+        16.599999994039536,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.799999982118607,
+        16.600000023841858,
+        16.799999982118607,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.599999994039536,
+        16.80000001192093,
+        16.69999998807907,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.80000001192093,
+        16.5,
+        16.799999982118607,
+        16.5,
+        16.600000023841858,
+        16.69999998807907,
+        16.80000001192093,
+        16.5,
+        16.799999982118607,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.599999994039536,
+        16.69999998807907,
+        16.900000005960464,
+        16.5,
+        16.599999994039536,
+        16.80000001192093,
+        16.400000005960464,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.80000001192093,
+        16.69999998807907,
+        16.599999994039536,
+        16.599999994039536,
+        16.700000017881393,
+        16.69999998807907,
+        16.80000001192093
+      ]
+    }
+  },
+  "success": true
+}

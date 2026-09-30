@@ -11,14 +11,14 @@ import { getDetailTexture } from '../terrain/DetailTextures.js';
 
 export const RULES = {
 	minHeight: 1.8, // wet sand / water below
-	villageRadius: 100, // palms inside it are capped (between the houses)
-	villagePalms: 10,
-	pathClear: 12, // big plants: around the pier path x = 55, z in [-130, -40]
-	path: { x: WORLD.pier.x, z0: - 130, z1: - 40 },
+	villageRadius: 90, // palms inside it are capped (between the houses)
+	villagePalms: 18,
+	pathClear: 5, // keep the jetty approach open; curved paths also use footprint exclusions
+	path: { x: WORLD.pier.x, z0: - 94, z1: - 62 },
 	spawnClear: 5,
 	obstacleClear: 2, // around village footprints and boardwalks
 	// default boardwalk (pier steps -> plaza) when no village object is supplied
-	boardwalk: [ [ 55, - 65 ], [ 54.6, - 72 ], [ 52.4, - 82 ], [ 48.4, - 92 ], [ 44.8, - 100.5 ], [ 42.6, - 107.2 ] ],
+	boardwalk: [ [ - 55, - 71 ], [ - 54, - 85 ], [ - 49, - 96 ], [ - 40, - 106 ], [ - 20, - 113 ], [ 0, - 124 ], [ 19, - 137 ] ],
 	boardwalkWidth: 1.8,
 };
 
@@ -46,7 +46,7 @@ const rot = ( x, z, a ) => [ x * Math.cos( a ) - z * Math.sin( a ), x * Math.sin
 
 export class VegSite {
 
-	constructor( terrain, { seed = 1234, footprints = [], paths = null } = {} ) {
+	constructor( terrain, { seed = 3209, footprints = [], paths = null } = {} ) {
 
 		this.terrain = terrain;
 		this.noise = new Noise2D( seed );
@@ -326,7 +326,7 @@ function headland( x, z, c, sandOk = false ) {
 
 }
 
-export function scatterVegetation( site, seed = 99 ) {
+export function scatterVegetation( site, seed = 930 ) {
 
 	_site = site;
 
@@ -355,6 +355,9 @@ export function scatterVegetation( site, seed = 99 ) {
 		// headlands (south of the bay line): wind-shaped scattered trees and clumps, not a closed forest
 		if ( z > Z1 ) p = c.forest > 0.5 ? 0.45 * smoothstep( - 0.2, 0.2, clump ) : p;
 		if ( c.forest <= 0.5 ) p += headland( x, z, c ) * ( 0.9 * smoothstep( - 0.2, 0.2, clump ) + 0.1 );
+		// The lower western headland stays airy; denser woodland frames the eastern ridge.
+		const exposedWest = ( 1 - smoothstep( - 210, - 90, x ) ) * ( 1 - smoothstep( 35, 90, c.h ) );
+		p *= 1 - 0.6 * exposedWest;
 		if ( rand() > p ) return;
 		// crowns must not overhang the houses: trunks >= 7 m from footprints / boardwalks
 		if ( ! site.allowed( x, z, c, { minH: 3, maxBare: 0.3, clear: 5, big: true } ) ) return;
@@ -393,7 +396,9 @@ export function scatterVegetation( site, seed = 99 ) {
 		site.cover( x, z, c );
 		const grove = N.fbm( x / 48, z / 48, 3 ) + 0.4 * N2.fbm( x / 17, z / 17, 2 );
 		const band = smoothstep( 1.95, 2.35, c.h ) * ( 1 - smoothstep( 5.2, 7.2, c.h ) );
-		const p = 0.5 * smoothstep( - 0.28, 0.22, grove ) * band;
+		const westGrove = Math.exp( - ( ( ( x + 140 ) / 65 ) ** 2 + ( ( z + 105 ) / 50 ) ** 2 ) );
+		const eastGrove = Math.exp( - ( ( ( x - 120 ) / 75 ) ** 2 + ( ( z + 125 ) / 60 ) ** 2 ) );
+		const p = ( 0.2 + 0.45 * Math.max( westGrove, eastGrove ) ) * smoothstep( - 0.28, 0.22, grove ) * band;
 		if ( rand() > p ) return;
 		if ( ! site.allowed( x, z, c, { minH: 2.0, maxBare: 0.2, clear: 3, big: true, maxSand: 1.01, maxPath: 0.5 } ) || c.ny < 0.9 ) return;
 		if ( ! occ.free( x, z, 1.95, 1 ) || ! occT.free( x, z, 1.5, 1 ) ) return;
@@ -405,12 +410,13 @@ export function scatterVegetation( site, seed = 99 ) {
 	// --- a few palms inside the village radius: between the houses and along the beach edge,
 	// clear of buildings, boardwalks and the pier path --------------------------------------
 	const vc = [];
-	scatter( rand, - 70, - 220, 150, - 60, 3.5, ( x, z ) => {
+	scatter( rand, site.village.x - RULES.villageRadius, site.village.z - RULES.villageRadius, site.village.x + RULES.villageRadius, site.village.z + RULES.villageRadius, 3.5, ( x, z ) => {
 
 		if ( site.villageDist( x, z ) >= RULES.villageRadius ) return;
 		if ( ! site.hasVillage && z < - 106 ) return; // unknown houses: stay on the beach edge
 		site.cover( x, z, c );
-		if ( c.h < 2.05 || c.h > 14 || c.bare > 0.2 || c.ny < 0.9 ) return;
+		if ( c.h < 2.05 || c.h > 14 || c.bare > 0.2 || c.ny < 0.9 || c.scarp > 0.3 || c.path > 0.15 ) return;
+		if ( site.terrain.pathDistance && site.terrain.pathDistance( x, z ) < 3 ) return;
 		if ( site.pathDist( x, z ) < RULES.pathClear || site.spawnDist( x, z ) < RULES.spawnClear + 3 ) return;
 		const od = site.obstacleDist( x, z );
 		if ( od < 3.5 ) return;

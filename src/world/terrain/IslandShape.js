@@ -77,14 +77,14 @@ export const SEA_STACKS = [
 
 // Footpaths (x, z polylines) with half widths. Worn into the ground (darkened + slightly sunken).
 export const PATHS = [
-	// beach at the spawn up to the front row and on to the plaza
-	{ w: 1.1, pts: [ [ 21, - 56 ], [ 20, - 68 ], [ 18.5, - 80 ], [ 16.5, - 92 ], [ 15.5, - 100 ], [ 20, - 102.5 ], [ 28, - 104.5 ], [ 35.5, - 108.5 ] ] },
-	// plaza north up the valley and onto the central spur (hiking trail)
-	{ w: 0.6, pts: [ [ 42, - 116.5 ], [ 45.5, - 126 ], [ 48, - 138 ], [ 49, - 150 ], [ 49.5, - 162 ], [ 47, - 175 ], [ 41, - 188 ], [ 36, - 199 ], [ 31, - 212 ], [ 33, - 224 ], [ 26, - 236 ], [ 20, - 247 ], [ 24, - 258 ], [ 16, - 270 ], [ 11, - 283 ], [ 15, - 296 ], [ 8, - 309 ], [ 4, - 322 ] ] },
-	// east: boathouse up to the boardwalk
-	{ w: 0.9, pts: [ [ 88, - 62 ], [ 80, - 72 ], [ 70, - 80 ], [ 60, - 86 ], [ 54.5, - 90 ] ] },
-	// west: along the back of the beach to the western grove
-	{ w: 0.8, pts: [ [ 18, - 62 ], [ 5, - 68 ], [ - 12, - 73 ], [ - 30, - 77 ], [ - 50, - 80 ], [ - 72, - 84 ] ] },
+	// A sheltered arrival path fans out to three cabins instead of a town plaza.
+	{ w: 1.1, pts: [ [ - 55, - 67 ], [ - 55, - 74 ], [ - 54, - 85 ], [ - 49, - 96 ], [ - 40, - 106 ], [ - 20, - 113 ], [ 0, - 124 ], [ 14, - 134 ], [ 19, - 137 ] ] },
+	{ w: 0.8, pts: [ [ - 49, - 96 ], [ - 64, - 96 ], [ - 78, - 100 ], [ - 86, - 103 ] ] },
+	{ w: 0.8, pts: [ [ - 20, - 113 ], [ - 22, - 115.5 ], [ - 23.5, - 118.5 ] ] },
+	// Ridge walk bends around the eastern cabin before climbing the valley.
+	{ w: 0.8, pts: [ [ 14, - 134 ], [ 30, - 141 ], [ 46, - 163 ], [ 50, - 191 ], [ 38, - 212 ], [ 28, - 235 ], [ 20, - 258 ], [ 12, - 286 ], [ 4, - 315 ] ] },
+	// Beach walk reaches the open western palm grove.
+	{ w: 0.9, pts: [ [ - 54, - 85 ], [ - 84, - 86 ], [ - 110, - 80 ], [ - 138, - 69 ], [ - 160, - 49 ] ] },
 ];
 
 // distance from (x, z) to a polyline; returns [distance, arc length position of the closest point]

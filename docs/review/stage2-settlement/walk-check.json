@@ -1,0 +1,170 @@
+{
+  "created": "2026-09-30T08:28:23.510Z",
+  "status": "passed",
+  "fixedStepSeconds": 0.016666666666666666,
+  "scope": "Actual TerrainData, Village, Rocks, DebrisPlacer, vegetation placement, Colliders and Player.update().",
+  "limits": [
+    "Ocean query returns a constant sea level of zero; waves, swimming and boat boarding are not tested.",
+    "GPU-only detail-texture upload/mipmap generation and decorative-fish upload are skipped; original CPU pixels, geometry and colliders are retained.",
+    "No renderer, DOM, pointer lock, audio or animation-loop timing is tested. This is not a FPS or visual-quality measurement.",
+    "Every route starts at the configured spawn and moves continuously with W and look input; no position teleport, jump or collision bypass is used."
+  ],
+  "checks": [
+    {
+      "name": "Exactly three cabins",
+      "pass": true
+    },
+    {
+      "name": "All sampled foundations meet the ground",
+      "pass": true,
+      "floating": []
+    },
+    {
+      "name": "Vegetation clears the spawn",
+      "pass": true,
+      "nearestMetres": 10.174572251079082
+    },
+    {
+      "name": "Jetty starts on dry sand near deck height",
+      "pass": true,
+      "ground": 2.2537350058555603,
+      "deck": 2.3
+    },
+    {
+      "name": "Boat berth has water depth",
+      "pass": true,
+      "seabed": -2.911289930343628
+    },
+    {
+      "name": "Jetty props follow the relocated deck",
+      "pass": true,
+      "floating": []
+    },
+    {
+      "name": "Ladder follows the new jetty head",
+      "pass": true,
+      "ladder": {
+        "x": -47.93,
+        "y": 2.3,
+        "z": 17.1
+      }
+    }
+  ],
+  "routes": [
+    {
+      "name": "Jetty and return",
+      "pass": true,
+      "frames": 4202,
+      "travelledMetres": 206.80241195613988,
+      "maxSurfaceDeficit": 0,
+      "minY": 2.287359876537325,
+      "maxY": 3.04665140131064,
+      "endDistanceFromSpawn": 0.0017855284169146772,
+      "checkpointsReached": 212,
+      "checkpointsTotal": 212,
+      "simulatedSeconds": 70.03333333333333
+    },
+    {
+      "name": "Driftwood cabin exterior and return",
+      "pass": true,
+      "frames": 2073,
+      "travelledMetres": 99.97671227977246,
+      "maxSurfaceDeficit": 0,
+      "minY": 3.04665140131064,
+      "maxY": 3.9882091254632845,
+      "endDistanceFromSpawn": 0.05913458476469674,
+      "checkpointsReached": 108,
+      "checkpointsTotal": 108,
+      "simulatedSeconds": 34.55
+    },
+    {
+      "name": "Palm cabin exterior and return",
+      "pass": true,
+      "frames": 2201,
+      "travelledMetres": 106.43724455825766,
+      "maxSurfaceDeficit": 0,
+      "minY": 3.04665140131064,
+      "maxY": 4.723387800338399,
+      "endDistanceFromSpawn": 0.060297369528371565,
+      "checkpointsReached": 114,
+      "checkpointsTotal": 114,
+      "simulatedSeconds": 36.68333333333333
+    },
+    {
+      "name": "Ridge cabin exterior and return",
+      "pass": true,
+      "frames": 3774,
+      "travelledMetres": 185.39934383025576,
+      "maxSurfaceDeficit": 0,
+      "minY": 3.04665140131064,
+      "maxY": 6.05237871099995,
+      "endDistanceFromSpawn": 0.099748802897382,
+      "checkpointsReached": 188,
+      "checkpointsTotal": 188,
+      "simulatedSeconds": 62.9
+    }
+  ],
+  "layout": {
+    "spawn": {
+      "x": -54,
+      "z": -85
+    },
+    "pier": {
+      "x": -55,
+      "zStart": -70,
+      "zEnd": 22,
+      "deckHeight": 2.3,
+      "width": 2.6,
+      "headWidth": 14,
+      "headDepth": 7
+    },
+    "cabins": [
+      {
+        "name": "Driftwood cabin",
+        "x": -85,
+        "z": -110,
+        "floorY": 4.280721059000678
+      },
+      {
+        "name": "Palm cabin",
+        "x": -24,
+        "z": -126,
+        "floorY": 5.3121061921765955
+      },
+      {
+        "name": "Ridge cabin",
+        "x": 18,
+        "z": -145,
+        "floorY": 6.592281588132874
+      }
+    ],
+    "villageGeometry": {
+      "triangles": 57294,
+      "drawCalls": 6,
+      "shadowCasters": 1,
+      "shadowTriangles": 57186,
+      "lights": 20,
+      "textureMB": 43.33333333333334,
+      "bakeMs": 0,
+      "baked": false
+    },
+    "vegetation": {
+      "palms": 235,
+      "trees": 9157,
+      "bananas": 247,
+      "shrubs": 4411,
+      "youngPalms": 260,
+      "ferns": 34939,
+      "monsteras": 1144,
+      "elephantEars": 15,
+      "heliconias": 42,
+      "strelitzias": 9,
+      "villagePalms": 18
+    },
+    "colliders": {
+      "boxes": 348,
+      "cylinders": 419,
+      "debris": 68
+    }
+  }
+}

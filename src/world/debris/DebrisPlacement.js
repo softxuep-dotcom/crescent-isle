@@ -478,11 +478,10 @@ export class DebrisPlacer {
 
 		}
 
-		// the market plaza and the pier foot get a few more crates, barrels and baskets of floats
+		// A small supply stack beside the new jetty; cabin clutter follows real footprints.
 		const extra = [
-			[ 'crates', 34.4, - 114.4, 0.3 ], [ 'barrels', 47.6, - 114.8, - 0.4 ], [ 'traps', 60.4, - 63.2, 0.2 ],
-			[ 'crates', 50.6, - 62.5, - 0.2 ], [ 'traps', 76.2, - 66.0, - 0.1 ], [ 'junk', 86.5, - 66.5, 0.3 ],
-			[ 'barrels', 42.2, - 67.8, 0.5 ], [ 'crates', 96.8, - 62.8, - 0.1 ],
+			[ 'crates', WORLD.pier.x + 5.4, WORLD.pier.zStart + 1.5, - 0.2 ],
+			[ 'barrels', WORLD.pier.x - 5.0, WORLD.pier.zStart - 4.0, 0.3 ],
 		];
 		for ( const [ type, x, z, ry ] of extra ) {
 
@@ -741,8 +740,8 @@ export class DebrisPlacer {
 		const B = this.B;
 		// beached skiffs on the upper beach, away from the other boats
 		const skiffs = [
-			{ at: [ 27, - 62.5 ], ry: - 0.25, up: true, hull: lin( 0x4f8f5a ), bottom: lin( 0x2f2f2f ) },
-			{ at: [ 101, - 61.5 ], ry: 0.6, up: false, hull: lin( 0xe8d8b0 ), bottom: lin( 0x9a4030 ), rz: 0.22 },
+			{ at: [ WORLD.pier.x - 16, WORLD.pier.zStart - 1 ], ry: - 0.25, up: true, hull: lin( 0x4f8f5a ), bottom: lin( 0x2f2f2f ) },
+			{ at: [ WORLD.pier.x + 23, WORLD.pier.zStart - 2 ], ry: 0.6, up: false, hull: lin( 0xe8d8b0 ), bottom: lin( 0x9a4030 ), rz: 0.22 },
 		];
 		for ( const s of skiffs ) {
 
@@ -775,8 +774,8 @@ export class DebrisPlacer {
 
 		}
 
-		// wheelbarrows by the sheds / yards
-		for ( const [ x0, z0, ry ] of [ [ 23.8, - 121.2, 1.9 ], [ 70.5, - 125.8, - 1.2 ], [ 90.5, - 143.6, 2.6 ] ] ) {
+		// One garden wheelbarrow at each actual cabin, clear of the porch and trail.
+		for ( const [ x0, z0, ry ] of ( this.village?.buildings || [] ).map( ( b ) => [ b.x + 8, b.z - 2, 1.9 ] ) ) {
 
 			for ( let k = 0; k < 16; k ++ ) {
 
@@ -796,7 +795,7 @@ export class DebrisPlacer {
 		// fire pit on the upper beach west of the path: ring of stones, charred wood, log seats
 		{
 
-			const cx = - 6, cz = - 64.5;
+			const cx = WORLD.pier.x + 22, cz = WORLD.pier.zStart - 10;
 			for ( let k = 0; k < 20; k ++ ) {
 
 				const x = cx + ( rand() - 0.5 ) * k * 0.8, z = cz + ( rand() - 0.5 ) * k * 0.5;

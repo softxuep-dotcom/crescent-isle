@@ -507,27 +507,27 @@ export function buildPier( { B, terrain, colliders, rand, lights, inst, signB = 
 	// ------------------------------------------------------------------ T-head outfitting
 	const edgeX = hx1; // boat side (east)
 	// mooring bollards + cleat, with rope loops
-	for ( const bz of [ 34.3, 38.7 ] ) {
+	for ( const bz of [ ( z1 - 5.7 ), ( z1 - 1.3 ) ] ) {
 
 		const bx = edgeX - 0.45;
 		bollard( B, bx, DK, bz, rand.next() );
 		ropeLoop( B, bx, DK + 0.36, bz, 0.155, null, rand.next() );
-		ropeCoil( B, bx - 0.75, DK, bz + ( bz < 36 ? 0.35 : - 0.35 ), 0.08, 0.3, 4, rand.next() );
+		ropeCoil( B, bx - 0.75, DK, bz + ( bz < ( z1 - 4 ) ? 0.35 : - 0.35 ), 0.08, 0.3, 4, rand.next() );
 		colliders.addCylinder( bx, bz, 0.22, DK, DK + 0.5, { tag: 'bollard' } );
 		info.bollards.push( new Vector3( bx, DK + 0.45, bz ) );
 
 	}
 
-	cleat( B, edgeX - 0.22, DK, 36.5, Math.PI / 2, rand.next() );
-	info.bollards.push( new Vector3( edgeX - 0.22, DK + 0.1, 36.5 ) );
+	cleat( B, edgeX - 0.22, DK, ( z1 - 3.5 ), Math.PI / 2, rand.next() );
+	info.bollards.push( new Vector3( edgeX - 0.22, DK + 0.1, ( z1 - 3.5 ) ) );
 
 	// tyre fenders on the berthing face
-	for ( const fz of [ 33.75, 36.0, 37.35, 39.25 ] ) tireFender( B, edgeX, DK - 0.04, fz, 0, rand.range( 0.65, 0.85 ), rand.next() );
+	for ( const fz of [ ( z1 - 6.25 ), ( z1 - 4 ), ( z1 - 2.65 ), ( z1 - 0.75 ) ] ) tireFender( B, edgeX, DK - 0.04, fz, 0, rand.range( 0.65, 0.85 ), rand.next() );
 
 	// ladder down into the water on the boat side
 	{
 
-		const lz = 35.1, lx = edgeX + 0.07;
+		const lz = ( z1 - 4.9 ), lx = edgeX + 0.07;
 		const yb = - 2.2, yt = DK + 0.85;
 		const t = C.galv, d = HARD( rand.next(), 0.45, 0.85, 0.4 );
 		for ( const s of [ - 1, 1 ] ) {
@@ -570,13 +570,13 @@ export function buildPier( { B, terrain, colliders, rand, lights, inst, signB = 
 	}
 
 	// south edge: bench facing the sea, life ring, fish cleaning table, fishing rods
-	bench( B, 52.4, DK, z1 - 0.95, 0, 1.7, rand.next() );
-	addBox( 52.4, DK + 0.45, z1 - 1.0, 0.85, 0.45, 0.3, { tag: 'bench' } );
-	lifeRing( B, 55.8, DK + 0.58, rowsZ[ 2 ] + 0.12, 0, rand.next() );
-	cleaningTable( B, 58.3, DK, z1 - 0.9, 0, rand.next() );
-	addBox( 58.3, DK + 0.45, z1 - 0.9, 0.7, 0.45, 0.35, { tag: 'table' } );
-	bucket( B, 59.3, DK, z1 - 0.75, C.blue, rand.next() );
-	for ( const [ rx, lean ] of [ [ 56.55, 0.35 ], [ 56.9, 0.28 ] ] ) {
+	bench( B, ( X - 2.6 ), DK, z1 - 0.95, 0, 1.7, rand.next() );
+	addBox( ( X - 2.6 ), DK + 0.45, z1 - 1.0, 0.85, 0.45, 0.3, { tag: 'bench' } );
+	lifeRing( B, ( X + 0.8 ), DK + 0.58, rowsZ[ 2 ] + 0.12, 0, rand.next() );
+	cleaningTable( B, ( X + 3.3 ), DK, z1 - 0.9, 0, rand.next() );
+	addBox( ( X + 3.3 ), DK + 0.45, z1 - 0.9, 0.7, 0.45, 0.35, { tag: 'table' } );
+	bucket( B, ( X + 4.3 ), DK, z1 - 0.75, C.blue, rand.next() );
+	for ( const [ rx, lean ] of [ [ ( X + 1.55 ), 0.35 ], [ ( X + 1.9 ), 0.28 ] ] ) {
 
 		const base = [ rx, DK + 0.01, rowsZ[ 2 ] - 0.25 ];
 		const tip = [ rx + 0.25, DK + 2.6, rowsZ[ 2 ] + 2.6 * Math.tan( lean ) ];
@@ -587,28 +587,28 @@ export function buildPier( { B, terrain, colliders, rand, lights, inst, signB = 
 
 	// deck clutter (instanced crates / traps / barrels)
 	const crate = ( x, y, z, ry ) => inst.add( 'crate', x, y, z, ry, [ rand.range( 0.85, 1.1 ), rand.range( 0.85, 1.05 ), rand.range( 0.82, 1.0 ) ] );
-	crate( 49.25, DK, 34.35, 0.05 );
-	crate( 49.25, DK, 34.8, - 0.04 );
-	crate( 49.95, DK, 34.55, 1.57 );
-	crate( 49.3, DK + 0.4, 34.55, 0.2 );
-	addBox( 49.55, DK + 0.4, 34.6, 0.55, 0.4, 0.45, { tag: 'crates' } );
+	crate( ( X - 5.75 ), DK, ( z1 - 5.65 ), 0.05 );
+	crate( ( X - 5.75 ), DK, ( z1 - 5.2 ), - 0.04 );
+	crate( ( X - 5.05 ), DK, ( z1 - 5.45 ), 1.57 );
+	crate( ( X - 5.7 ), DK + 0.4, ( z1 - 5.45 ), 0.2 );
+	addBox( ( X - 5.45 ), DK + 0.4, ( z1 - 5.4 ), 0.55, 0.4, 0.45, { tag: 'crates' } );
 
 	const trap = ( x, y, z, ry ) => inst.add( 'trap', x, y, z, ry, [ rand.range( 0.85, 1.05 ), rand.range( 0.85, 1.0 ), rand.range( 0.8, 0.95 ) ] );
-	trap( 50.1, DK, 38.55, 0.02 );
-	trap( 50.1, DK, 39.1, - 0.03 );
-	trap( 51.05, DK, 38.6, 0.05 );
-	trap( 50.3, DK + 0.31, 38.8, 0.12 );
-	trap( 50.5, DK + 0.31, 38.75, 1.2 );
-	addBox( 50.55, DK + 0.35, 38.8, 0.75, 0.35, 0.5, { tag: 'traps' } );
+	trap( ( X - 4.9 ), DK, ( z1 - 1.45 ), 0.02 );
+	trap( ( X - 4.9 ), DK, ( z1 - 0.9 ), - 0.03 );
+	trap( ( X - 3.95 ), DK, ( z1 - 1.4 ), 0.05 );
+	trap( ( X - 4.7 ), DK + 0.31, ( z1 - 1.2 ), 0.12 );
+	trap( ( X - 4.5 ), DK + 0.31, ( z1 - 1.25 ), 1.2 );
+	addBox( ( X - 4.45 ), DK + 0.35, ( z1 - 1.2 ), 0.75, 0.35, 0.5, { tag: 'traps' } );
 
-	inst.add( 'barrel', 48.75, DK, 36.1, 0.3, [ 0.9, 0.85, 0.8 ] );
-	inst.add( 'barrel', 49.4, DK, 36.75, 1.1, [ 1.05, 1.0, 0.95 ] );
-	colliders.addCylinder( 48.75, 36.1, 0.32, DK, DK + 0.9, { tag: 'barrel' } );
-	colliders.addCylinder( 49.4, 36.75, 0.32, DK, DK + 0.9, { tag: 'barrel' } );
+	inst.add( 'barrel', ( X - 6.25 ), DK, ( z1 - 3.9 ), 0.3, [ 0.9, 0.85, 0.8 ] );
+	inst.add( 'barrel', ( X - 5.6 ), DK, ( z1 - 3.25 ), 1.1, [ 1.05, 1.0, 0.95 ] );
+	colliders.addCylinder( ( X - 6.25 ), ( z1 - 3.9 ), 0.32, DK, DK + 0.9, { tag: 'barrel' } );
+	colliders.addCylinder( ( X - 5.6 ), ( z1 - 3.25 ), 0.32, DK, DK + 0.9, { tag: 'barrel' } );
 
 	// floats hanging on the west rail
-	buoyString( B, [ hx0 + 0.12, railTop + 0.02, 34.0 ], [ hx0 + 0.12, railTop + 0.02, 35.9 ], 4, rand, 0.22 );
-	buoyString( B, [ hx0 + 0.12, railTop + 0.02, 37.1 ], [ hx0 + 0.12, railTop + 0.02, 38.9 ], 3, rand, 0.18 );
+	buoyString( B, [ hx0 + 0.12, railTop + 0.02, ( z1 - 6 ) ], [ hx0 + 0.12, railTop + 0.02, ( z1 - 4.1 ) ], 4, rand, 0.22 );
+	buoyString( B, [ hx0 + 0.12, railTop + 0.02, ( z1 - 2.9 ) ], [ hx0 + 0.12, railTop + 0.02, ( z1 - 1.1 ) ], 3, rand, 0.18 );
 
 	// head lamps
 	for ( const [ lx, lz, yaw ] of [ [ hx0 + 0.55, z1 - 0.55, 3 * Math.PI / 4 ], [ hx1 - 0.6, z1 - 0.55, - 3 * Math.PI / 4 ], [ hx0 + 0.55, zH + 0.6, Math.PI / 4 ] ] ) {
@@ -621,11 +621,12 @@ export function buildPier( { B, terrain, colliders, rand, lights, inst, signB = 
 	}
 
 	// a few things along the walkway: gear left where it was last used
-	bucket( B, X + 0.9, DK, - 21.3, C.white, rand.next() );
-	bucket( B, X - 0.95, DK, 12.6, C.orange, rand.next() );
-	ropeCoil( B, X + 0.85, DK, - 33.0, 0.07, 0.24, 3, rand.next(), C.ropeDark );
-	ropeCoil( B, X - 0.85, DK, 21.5, 0.06, 0.22, 4, rand.next() );
-	for ( const [ cz, side ] of [ [ - 47.3, 1 ], [ - 15.4, - 1 ], [ 27.8, 1 ] ] ) {
+	const walkZ = ( z ) => z0 + ( z + 64 ) / 104 * ( z1 - z0 );
+	bucket( B, X + 0.9, DK, walkZ( - 21.3 ), C.white, rand.next() );
+	bucket( B, X - 0.95, DK, walkZ( 12.6 ), C.orange, rand.next() );
+	ropeCoil( B, X + 0.85, DK, walkZ( - 33.0 ), 0.07, 0.24, 3, rand.next(), C.ropeDark );
+	ropeCoil( B, X - 0.85, DK, walkZ( 21.5 ), 0.06, 0.22, 4, rand.next() );
+	for ( const [ cz, side ] of [ [ walkZ( - 47.3 ), 1 ], [ walkZ( - 15.4 ), - 1 ], [ walkZ( 27.8 ), 1 ] ] ) {
 
 		// a cleat on the deck edge with a line still made fast, trailing over the side
 		const cx = X + side * ( halfW - 0.18 );
@@ -634,14 +635,14 @@ export function buildPier( { B, terrain, colliders, rand, lights, inst, signB = 
 
 	}
 
-	inst.add( 'crate', X - 0.95, DK, - 3.1, 1.4, [ 0.9, 0.85, 0.8 ] );
-	inst.add( 'crate', X - 0.92, DK + 0.4, - 3.05, 1.2, [ 1.0, 0.95, 0.9 ] );
-	colliders.addBox( _v.set( X - 0.95, DK + 0.4, - 3.1 ), _h.set( 0.3, 0.4, 0.35 ), 0, { tag: 'crate' } );
-	inst.add( 'trap', X + 0.8, DK, 30.4, 0.05, [ 0.9, 0.9, 0.85 ] );
-	colliders.addBox( _v.set( X + 0.8, DK + 0.25, 30.4 ), _h.set( 0.48, 0.3, 0.28 ), 0.05, { tag: 'trap' } );
-	ropeCoil( B, X - 0.8, DK, 4.5, 0.07, 0.26, 4, rand.next(), C.ropeBlue );
-	inst.add( 'crate', X + 0.95, DK, - 40.2, 0.1, [ 1, 0.95, 0.9 ] );
-	colliders.addBox( _v.set( X + 0.95, DK + 0.2, - 40.2 ), _h.set( 0.33, 0.2, 0.24 ), 0.1, { tag: 'crate' } );
+	inst.add( 'crate', X - 0.95, DK, walkZ( - 3.1 ), 1.4, [ 0.9, 0.85, 0.8 ] );
+	inst.add( 'crate', X - 0.92, DK + 0.4, walkZ( - 3.05 ), 1.2, [ 1.0, 0.95, 0.9 ] );
+	colliders.addBox( _v.set( X - 0.95, DK + 0.4, walkZ( - 3.1 ) ), _h.set( 0.3, 0.4, 0.35 ), 0, { tag: 'crate' } );
+	inst.add( 'trap', X + 0.8, DK, walkZ( 30.4 ), 0.05, [ 0.9, 0.9, 0.85 ] );
+	colliders.addBox( _v.set( X + 0.8, DK + 0.25, walkZ( 30.4 ) ), _h.set( 0.48, 0.3, 0.28 ), 0.05, { tag: 'trap' } );
+	ropeCoil( B, X - 0.8, DK, walkZ( 4.5 ), 0.07, 0.26, 4, rand.next(), C.ropeBlue );
+	inst.add( 'crate', X + 0.95, DK, walkZ( - 40.2 ), 0.1, [ 1, 0.95, 0.9 ] );
+	colliders.addBox( _v.set( X + 0.95, DK + 0.2, walkZ( - 40.2 ) ), _h.set( 0.33, 0.2, 0.24 ), 0.1, { tag: 'crate' } );
 
 	return info;
 

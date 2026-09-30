@@ -56,9 +56,6 @@ import { PostFX } from './post/PostFX.js';
 import { AirHaze } from './post/AirHaze.js';
 import { FlyCamera } from './player/FlyCamera.js';
 import { Player } from './player/Player.js';
-import { Game } from './game/Game.js';
-import { STAND } from './game/FishStand.js';
-import { CHANDLERY } from './game/Chandlery.js';
 import { BoatController } from './player/BoatController.js';
 import { BoatSpray } from './player/BoatSpray.js';
 import { WakeSim } from './ocean/WakeSim.js';
@@ -339,17 +336,7 @@ fn terrainWetness( xz: vec2f, h: f32 ) -> vec2f {
 		// recorded field recordings (public/audio, credits in public/audio/CREDITS.md); ?noAudio turns it off
 		this.audio = qs.has( 'noAudio' ) ? null : new SoundScape();
 		this.player.audio = this.audio;
-		// the fishing game (rod, bites, catch, cooler, fish stand)
-		this.game = new Game( this );
-		// the lanterns at Joe's fish stand and Marta's chandlery (lit from dusk like the village lamps);
-		// positions are in each stall's frame (x right, z toward the customer), turned by its yaw
-		for ( const [ s, lx, ly, lz ] of [ [ STAND, - 0.9, 1.85, 0.1 ], [ CHANDLERY, - 0.75, 1.58, - 1.45 ] ] ) {
-
-			const c = Math.cos( s.yaw ), sn = Math.sin( s.yaw );
-			const x = s.x + lx * c + lz * sn, z = s.z - lx * sn + lz * c;
-			this.localLights.add( { position: new Vector3( x, this.terrainData.heightAt( s.x, s.z ) + ly, z ), color: new Color( 1.0, 0.72, 0.42 ), intensity: 5 * 1.5, range: 11, kind: 'lantern', flicker: 0.08 } );
-
-		}
+		// Exploration only: the fishing economy and its vendor actors are not instantiated.
 
 		this.boatCtl.onSlam = ( s ) => this.audio && this.audio.hullSlap( s );
 		engine.domElement.addEventListener( 'click', () => {
@@ -626,7 +613,6 @@ fn terrainWetness( xz: vec2f, h: f32 ) -> vec2f {
 		this.wake.update( dt );
 		if ( this.freeCam ) this.fly.update( dt );
 		else this.player.update( dt );
-		this.game.update( dt );
 		this.updateSun();
 
 		this.atmosphere.update( dt, this.camera.position.y );
