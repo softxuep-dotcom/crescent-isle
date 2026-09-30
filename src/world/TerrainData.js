@@ -124,13 +124,18 @@ export class TerrainData {
 
 	_coast( x, z, F, bz ) {
 
-		const dBody = ellipseDist( x, z, 0, - 442, 565, 400 );
-		const dW = ellipseDist( x, z, - 272, - 25, 92, 205 );
-		const dE = ellipseDist( x, z, 288, - 12, 108, 228 );
+		// Crescent Isle: a compact inland ridge, a low western arm and a longer
+		// eastern shelter. Keep the central surf beach in the shallow-water domain.
+		const dBody = ellipseDist( x, z, 0, - 388, 520, 350 );
+		const dW = ellipseDist( x, z, - 240, - 12, 78, 170 );
+		const dE = ellipseDist( x, z, 255, 10, 95, 225 );
 		let d = smin( dBody, smin( dW, dE, 40 ), 75 );
 		d += F.f170 * 34 * ( 1 - 0.9 * bz );
 		if ( bz < 1 ) d += this.noise.fbm( x / 38, z / 38, 3 ) * 7 * ( 1 - bz );
 		d += F.und * 5 * bz; // gentle beach undulation
+		// Broad coves, rather than a straight beach. This field feeds both the
+		// heightmap and coast queries, so surf, vegetation and walking agree.
+		d += Math.sin( ( x + 25 ) / 63 ) * 6 * bz;
 		return d;
 
 	}
@@ -144,8 +149,8 @@ export class TerrainData {
 
 		// rocky headlands and outer coast
 		const headland = Math.max(
-			1 - smoothstep( 60, 140, Math.hypot( ( x + 272 ) * 0.9, ( z + 25 ) * 0.45 ) ),
-			1 - smoothstep( 60, 150, Math.hypot( ( x - 288 ) * 0.9, ( z + 12 ) * 0.45 ) ) );
+			1 - smoothstep( 50, 125, Math.hypot( ( x + 240 ) * 0.9, ( z + 12 ) * 0.45 ) ),
+			1 - smoothstep( 60, 145, Math.hypot( ( x - 255 ) * 0.9, ( z - 10 ) * 0.45 ) ) );
 		const rm = Math.max( headland, 1 - bz * 1.4 );
 		let rock = 0;
 		if ( rm > 0.35 ) rock = smoothstep( 0.35, 0.75, clamp( rm * ( 0.55 + 0.45 * n2.fbm( x / 60, z / 60, 3 ) ), 0, 1 ) );

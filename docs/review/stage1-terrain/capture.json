@@ -1,0 +1,1786 @@
+{
+  "label": "stage1-capture-reset",
+  "url": "http://127.0.0.1:5191/?bench=&scale=1",
+  "capturedAt": "2026-09-30T08:26:13.748Z",
+  "method": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "renderScale": 1,
+    "deviceScaleFactor": 1,
+    "cameras": {
+      "beach": {
+        "p": [
+          15,
+          3,
+          -58
+        ],
+        "yaw": 3.141592653589793,
+        "pitch": -0.08,
+        "time": 16.2
+      },
+      "aerial": {
+        "p": [
+          60,
+          95,
+          140
+        ],
+        "yaw": 0.25132741228718347,
+        "pitch": -0.55,
+        "time": 15
+      },
+      "village": {
+        "p": [
+          62,
+          7,
+          -62
+        ],
+        "yaw": 0.34,
+        "pitch": -0.12,
+        "time": 15.5
+      },
+      "pier": {
+        "p": [
+          75,
+          4,
+          -10
+        ],
+        "yaw": 3.6128315516282616,
+        "pitch": -0.1,
+        "time": 15.5
+      }
+    },
+    "views": [
+      "beach",
+      "aerial",
+      "village",
+      "pier"
+    ],
+    "captureOnly": true,
+    "resetHistory": true,
+    "seed": "original BenchSeed.js (?bench)",
+    "screenshotFrames": 64,
+    "screenshotDt": 0,
+    "screenshotSimulationTime": 1000,
+    "warmupFrames": 90,
+    "measuredFrames": 120,
+    "rafFrames": 180,
+    "coldDefinition": "New empty Chromium profile; OS file cache and GPU driver shader caches are not cleared.",
+    "warmDefinition": "Same profile and process, normal reload after initial shots and measurements.",
+    "loadDefinition": "Navigation to visible start overlay after initialization, shader compilation and loader fade; local dev server, not public Internet.",
+    "fpsDefinition": "Animation-loop FPS: actual app.frame calls driven by requestAnimationFrame in headless Chromium. Bench throughput/GPU estimates are reported separately and are not displayed FPS.",
+    "rendering": "Headless hardware WebGPU if available; adapter details recorded. Headless timing is not a physical monitor refresh measurement."
+  },
+  "loads": {
+    "coldProfile": {
+      "stages": [
+        {
+          "status": "Starting…",
+          "ms": 73
+        },
+        {
+          "status": "Starting WebGPU…",
+          "ms": 3409.4000000059605
+        },
+        {
+          "status": "Building the atmosphere…",
+          "ms": 3725.699999988079
+        },
+        {
+          "status": "Shaping the island…",
+          "ms": 3753.2999999821186
+        },
+        {
+          "status": "Building the village…",
+          "ms": 5400.199999988079
+        },
+        {
+          "status": "Planting the island…",
+          "ms": 5612.299999982119
+        },
+        {
+          "status": "Rolling in the swell…",
+          "ms": 6526.299999982119
+        },
+        {
+          "status": "Growing the reef…",
+          "ms": 7300.0999999940395
+        },
+        {
+          "status": "Simulating the ocean…",
+          "ms": 8544.59999999404
+        },
+        {
+          "status": "Preparing the shaders…",
+          "ms": 9516.90000000596
+        },
+        {
+          "status": "Compiling shaders…",
+          "ms": 9612
+        },
+        {
+          "status": "Warming up…",
+          "ms": 16993.90000000596
+        },
+        {
+          "status": "Ready",
+          "ms": 17240.09999999404
+        }
+      ],
+      "navigationStart": 1790756774237.8,
+      "domContentLoadedMs": 3409.4000000059605,
+      "windowLoadMs": 7300.5999999940395,
+      "appReadyMs": 17240.09999999404,
+      "loaderFadeStartMs": 17240.29999998212,
+      "firstActionableMs": 18172.59999999404,
+      "navigation": {
+        "name": "http://127.0.0.1:5191/?bench=&scale=1",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 7300.5999999940395,
+        "navigationId": 8184,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.699999988079071,
+        "domainLookupStart": 0.699999988079071,
+        "domainLookupEnd": 0.699999988079071,
+        "connectStart": 0.699999988079071,
+        "secureConnectionStart": 0,
+        "connectEnd": 0.699999988079071,
+        "requestStart": 59.19999998807907,
+        "responseStart": 64.7999999821186,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 64.7999999821186,
+        "responseEnd": 65.40000000596046,
+        "transferSize": 4129,
+        "encodedBodySize": 3829,
+        "decodedBodySize": 3829,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 73.5,
+        "domContentLoadedEventStart": 3409.4000000059605,
+        "domContentLoadedEventEnd": 3409.5,
+        "domComplete": 7300.5999999940395,
+        "loadEventStart": 7300.5999999940395,
+        "loadEventEnd": 7300.5999999940395,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:5191/@vite/client",
+          "duration": 14,
+          "transferSize": 211069,
+          "encodedBodySize": 210769
+        },
+        {
+          "name": "http://127.0.0.1:5191/ui/keyart-720.jpg",
+          "duration": 19.599999994039536,
+          "transferSize": 161568,
+          "encodedBodySize": 161268
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/ui.css",
+          "duration": 15.199999988079071,
+          "transferSize": 63487,
+          "encodedBodySize": 63187
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/main.js",
+          "duration": 15.199999988079071,
+          "transferSize": 12864,
+          "encodedBodySize": 12564
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat+Brush&family=Kalam:wght@400;700&display=swap",
+          "duration": 3296.0999999940395,
+          "transferSize": 1444,
+          "encodedBodySize": 1144
+        },
+        {
+          "name": "http://127.0.0.1:5191/node_modules/vite/dist/client/env.mjs",
+          "duration": 3.7999999821186066,
+          "transferSize": 3778,
+          "encodedBodySize": 3478
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/BenchSeed.js",
+          "duration": 3.9000000059604645,
+          "transferSize": 3913,
+          "encodedBodySize": 3613
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/App.js",
+          "duration": 6.4000000059604645,
+          "transferSize": 180218,
+          "encodedBodySize": 179918
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/UI.js",
+          "duration": 18.69999998807907,
+          "transferSize": 653799,
+          "encodedBodySize": 653499
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/AppUI.js",
+          "duration": 20.69999998807907,
+          "transferSize": 99700,
+          "encodedBodySize": 99400
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/index.js",
+          "duration": 15,
+          "transferSize": 3046,
+          "encodedBodySize": 2746
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/GPU.js",
+          "duration": 16.100000023841858,
+          "transferSize": 51227,
+          "encodedBodySize": 50927
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Shadows.js",
+          "duration": 19.80000001192093,
+          "transferSize": 41462,
+          "encodedBodySize": 41162
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Frame.js",
+          "duration": 20.100000023841858,
+          "transferSize": 33522,
+          "encodedBodySize": 33222
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Engine.js",
+          "duration": 21.799999982118607,
+          "transferSize": 732,
+          "encodedBodySize": 432
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Input.js",
+          "duration": 24.299999982118607,
+          "transferSize": 14166,
+          "encodedBodySize": 13866
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Globals.js",
+          "duration": 24.299999982118607,
+          "transferSize": 1309,
+          "encodedBodySize": 1009
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/CDLOD.js",
+          "duration": 24.399999976158142,
+          "transferSize": 64739,
+          "encodedBodySize": 64439
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/Profiler.js",
+          "duration": 24.799999982118607,
+          "transferSize": 31240,
+          "encodedBodySize": 30940
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/SceneRenderer.js",
+          "duration": 25,
+          "transferSize": 841,
+          "encodedBodySize": 541
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/SceneRenderer.js",
+          "duration": 30.299999982118607,
+          "transferSize": 37020,
+          "encodedBodySize": 36720
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/core/DebugViews.js",
+          "duration": 30.400000005960464,
+          "transferSize": 25312,
+          "encodedBodySize": 25012
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Sky.js",
+          "duration": 30.80000001192093,
+          "transferSize": 67753,
+          "encodedBodySize": 67453
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Atmosphere.js",
+          "duration": 33.5,
+          "transferSize": 117136,
+          "encodedBodySize": 116836
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Clouds.js",
+          "duration": 37.900000005960464,
+          "transferSize": 496172,
+          "encodedBodySize": 495872
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/SkyProClouds.js",
+          "duration": 41.099999994039536,
+          "transferSize": 304111,
+          "encodedBodySize": 303811
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/sky/Environment.js",
+          "duration": 42.599999994039536,
+          "transferSize": 79494,
+          "encodedBodySize": 79194
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/TerrainData.js",
+          "duration": 46.900000005960464,
+          "transferSize": 257638,
+          "encodedBodySize": 257338
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/TerrainGPU.js",
+          "duration": 49.80000001192093,
+          "transferSize": 75018,
+          "encodedBodySize": 74718
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Terrain.js",
+          "duration": 54.5,
+          "transferSize": 234353,
+          "encodedBodySize": 234053
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/WorldLayout.js",
+          "duration": 66.5,
+          "transferSize": 8589,
+          "encodedBodySize": 8289
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/ShoreField.js",
+          "duration": 66.40000000596046,
+          "transferSize": 51412,
+          "encodedBodySize": 51112
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Colliders.js",
+          "duration": 66.39999997615814,
+          "transferSize": 29637,
+          "encodedBodySize": 29337
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Village.js",
+          "duration": 71.59999999403954,
+          "transferSize": 235811,
+          "encodedBodySize": 235511
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/BoatModel.js",
+          "duration": 72.7999999821186,
+          "transferSize": 83900,
+          "encodedBodySize": 83600
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Reef.js",
+          "duration": 76.69999998807907,
+          "transferSize": 433076,
+          "encodedBodySize": 432776
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Debris.js",
+          "duration": 77.09999999403954,
+          "transferSize": 54917,
+          "encodedBodySize": 54617
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Rocks.js",
+          "duration": 78.59999999403954,
+          "transferSize": 115677,
+          "encodedBodySize": 115377
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Wildlife.js",
+          "duration": 78.30000001192093,
+          "transferSize": 30235,
+          "encodedBodySize": 29935
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/marine/Whale.js",
+          "duration": 84.7000000178814,
+          "transferSize": 127974,
+          "encodedBodySize": 127674
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/OceanFFT.js",
+          "duration": 86.40000000596046,
+          "transferSize": 149806,
+          "encodedBodySize": 149506
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WaterSurface.js",
+          "duration": 89.30000001192093,
+          "transferSize": 101299,
+          "encodedBodySize": 100999
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/FoamTexture.js",
+          "duration": 91.09999999403954,
+          "transferSize": 26764,
+          "encodedBodySize": 26464
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WaterMaterial.js",
+          "duration": 92.7999999821186,
+          "transferSize": 218391,
+          "encodedBodySize": 218091
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/ShoreSim.js",
+          "duration": 94.59999999403954,
+          "transferSize": 69576,
+          "encodedBodySize": 69276
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/ShoreWaves.js",
+          "duration": 96.59999999403954,
+          "transferSize": 213443,
+          "encodedBodySize": 213143
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/Caustics.js",
+          "duration": 98.09999999403954,
+          "transferSize": 82749,
+          "encodedBodySize": 82449
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/UnderwaterLighting.js",
+          "duration": 98.10000002384186,
+          "transferSize": 82606,
+          "encodedBodySize": 82306
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/RefractionPass.js",
+          "duration": 97.80000001192093,
+          "transferSize": 41719,
+          "encodedBodySize": 41419
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/GroundBounce.js",
+          "duration": 100.2000000178814,
+          "transferSize": 52512,
+          "encodedBodySize": 52212
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/LocalLights.js",
+          "duration": 103.40000000596046,
+          "transferSize": 76067,
+          "encodedBodySize": 75767
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WaterQuery.js",
+          "duration": 103.2999999821186,
+          "transferSize": 46899,
+          "encodedBodySize": 46599
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/Breakers.js",
+          "duration": 106.09999999403954,
+          "transferSize": 248029,
+          "encodedBodySize": 247729
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/SurfFoam.js",
+          "duration": 106,
+          "transferSize": 143423,
+          "encodedBodySize": 143123
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/SeaDetail.js",
+          "duration": 109.30000001192093,
+          "transferSize": 40274,
+          "encodedBodySize": 39974
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/fx/Spray.js",
+          "duration": 113.2000000178814,
+          "transferSize": 224174,
+          "encodedBodySize": 223874
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/fx/AirMotes.js",
+          "duration": 109.5,
+          "transferSize": 71076,
+          "encodedBodySize": 70776
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/fx/MarineSnow.js",
+          "duration": 109.30000001192093,
+          "transferSize": 44090,
+          "encodedBodySize": 43790
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/Underwater.js",
+          "duration": 114.30000001192093,
+          "transferSize": 109624,
+          "encodedBodySize": 109324
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/PostFX.js",
+          "duration": 115.69999998807907,
+          "transferSize": 188658,
+          "encodedBodySize": 188358
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/AirHaze.js",
+          "duration": 116,
+          "transferSize": 152880,
+          "encodedBodySize": 152580
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/FlyCamera.js",
+          "duration": 115.69999998807907,
+          "transferSize": 11052,
+          "encodedBodySize": 10752
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/Player.js",
+          "duration": 120.69999998807907,
+          "transferSize": 156032,
+          "encodedBodySize": 155732
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/Game.js",
+          "duration": 120.80000001192093,
+          "transferSize": 110829,
+          "encodedBodySize": 110529
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/Chandlery.js",
+          "duration": 120.90000000596046,
+          "transferSize": 87047,
+          "encodedBodySize": 86747
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/FishStand.js",
+          "duration": 122.7000000178814,
+          "transferSize": 136593,
+          "encodedBodySize": 136293
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/BoatSpray.js",
+          "duration": 126.30000001192093,
+          "transferSize": 90493,
+          "encodedBodySize": 90193
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/player/BoatController.js",
+          "duration": 126.2000000178814,
+          "transferSize": 134084,
+          "encodedBodySize": 133784
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WakeSim.js",
+          "duration": 128,
+          "transferSize": 263652,
+          "encodedBodySize": 263352
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Vegetation.js",
+          "duration": 129.39999997615814,
+          "transferSize": 78753,
+          "encodedBodySize": 78453
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/audio/SoundScape.js",
+          "duration": 132.19999998807907,
+          "transferSize": 316906,
+          "encodedBodySize": 316606
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/CameraVelocity.js",
+          "duration": 133.5,
+          "transferSize": 10950,
+          "encodedBodySize": 10650
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ui/icons.js",
+          "duration": 122.5,
+          "transferSize": 61571,
+          "encodedBodySize": 61271
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/index.js",
+          "duration": 120.2999999821186,
+          "transferSize": 7016,
+          "encodedBodySize": 6716
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/index.js",
+          "duration": 120.40000000596046,
+          "transferSize": 2652,
+          "encodedBodySize": 2352
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/index.js",
+          "duration": 121.59999999403954,
+          "transferSize": 4966,
+          "encodedBodySize": 4666
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/core/EventDispatcher.js",
+          "duration": 123.40000000596046,
+          "transferSize": 6165,
+          "encodedBodySize": 5865
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/constants.js",
+          "duration": 123.40000000596046,
+          "transferSize": 3012,
+          "encodedBodySize": 2712
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Texture.js",
+          "duration": 123.5,
+          "transferSize": 52392,
+          "encodedBodySize": 52092
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/wgsl/lighting.js",
+          "duration": 123.80000001192093,
+          "transferSize": 125659,
+          "encodedBodySize": 125359
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Uniforms.js",
+          "duration": 123.30000001192093,
+          "transferSize": 54530,
+          "encodedBodySize": 54230
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Shader.js",
+          "duration": 124,
+          "transferSize": 132661,
+          "encodedBodySize": 132361
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/Engine.js",
+          "duration": 122.59999999403954,
+          "transferSize": 14058,
+          "encodedBodySize": 13758
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/webgpu.js",
+          "duration": 119.30000001192093,
+          "transferSize": 7738,
+          "encodedBodySize": 7438
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Material.js",
+          "duration": 119.89999997615814,
+          "transferSize": 62778,
+          "encodedBodySize": 62478
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/FullscreenPass.js",
+          "duration": 119.90000000596046,
+          "transferSize": 24151,
+          "encodedBodySize": 23851
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Mesh.js",
+          "duration": 119.80000001192093,
+          "transferSize": 20150,
+          "encodedBodySize": 19850
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Scene.js",
+          "duration": 119.80000001192093,
+          "transferSize": 6672,
+          "encodedBodySize": 6372
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/wgsl/common.js",
+          "duration": 120.19999998807907,
+          "transferSize": 79865,
+          "encodedBodySize": 79565
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Compute.js",
+          "duration": 117.80000001192093,
+          "transferSize": 17472,
+          "encodedBodySize": 17172
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Readback.js",
+          "duration": 124.10000002384186,
+          "transferSize": 21966,
+          "encodedBodySize": 21666
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/gpu/Mipmaps.js",
+          "duration": 119.2000000178814,
+          "transferSize": 18674,
+          "encodedBodySize": 18374
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/ComputeMips.js",
+          "duration": 115.40000000596046,
+          "transferSize": 27905,
+          "encodedBodySize": 27605
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/util/Noise.js",
+          "duration": 110.19999998807907,
+          "transferSize": 20624,
+          "encodedBodySize": 20324
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/TerrainNoise.js",
+          "duration": 110.2999999821186,
+          "transferSize": 46234,
+          "encodedBodySize": 45934
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/IslandShape.js",
+          "duration": 110.2999999821186,
+          "transferSize": 35668,
+          "encodedBodySize": 35368
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/TerrainBake.js",
+          "duration": 115.5,
+          "transferSize": 49620,
+          "encodedBodySize": 49320
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/DetailTextures.js",
+          "duration": 115.59999999403954,
+          "transferSize": 55434,
+          "encodedBodySize": 55134
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/TerrainShading.js",
+          "duration": 115.80000001192093,
+          "transferSize": 81254,
+          "encodedBodySize": 80954
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/Materials.js",
+          "duration": 110.90000000596046,
+          "transferSize": 28734,
+          "encodedBodySize": 28434
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/GeoBuilder.js",
+          "duration": 97.09999999403954,
+          "transferSize": 185892,
+          "encodedBodySize": 185592
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/VillageMaterials.js",
+          "duration": 99.7999999821186,
+          "transferSize": 221190,
+          "encodedBodySize": 220890
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/TextureBaker.js",
+          "duration": 102.59999999403954,
+          "transferSize": 209074,
+          "encodedBodySize": 208774
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/Boardwalk.js",
+          "duration": 102.59999999403954,
+          "transferSize": 40900,
+          "encodedBodySize": 40600
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/village/Buildings.js",
+          "duration": 104.90000000596046,
+          "transferSize": 439534,
+          "encodedBodySize": 439234
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Pier.js",
+          "duration": 106.69999998807907,
+          "transferSize": 206318,
+          "encodedBodySize": 206018
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Props.js",
+          "duration": 108.80000001192093,
+          "transferSize": 296571,
+          "encodedBodySize": 296271
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/HullLines.js",
+          "duration": 107.59999999403954,
+          "transferSize": 126429,
+          "encodedBodySize": 126129
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/GeoKit.js",
+          "duration": 107.80000001192093,
+          "transferSize": 103595,
+          "encodedBodySize": 103295
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/BoatMaterials.js",
+          "duration": 111.80000001192093,
+          "transferSize": 182659,
+          "encodedBodySize": 182359
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/HullBuilder.js",
+          "duration": 111.5,
+          "transferSize": 125694,
+          "encodedBodySize": 125394
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/Wheelhouse.js",
+          "duration": 114.7999999821186,
+          "transferSize": 294887,
+          "encodedBodySize": 294587
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/Running.js",
+          "duration": 116.5,
+          "transferSize": 35992,
+          "encodedBodySize": 35692
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/boat/DeckGear.js",
+          "duration": 116.59999999403954,
+          "transferSize": 122798,
+          "encodedBodySize": 122498
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/DebrisPlacement.js",
+          "duration": 136.69999998807907,
+          "transferSize": 322435,
+          "encodedBodySize": 322135
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/NatureMaterial.js",
+          "duration": 130.59999999403954,
+          "transferSize": 90054,
+          "encodedBodySize": 89754
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/ScannedDebris.js",
+          "duration": 130.80000001192093,
+          "transferSize": 76682,
+          "encodedBodySize": 76382
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/PebbleField.js",
+          "duration": 130.69999998807907,
+          "transferSize": 105766,
+          "encodedBodySize": 105466
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/DebrisShapes.js",
+          "duration": 139.5,
+          "transferSize": 347514,
+          "encodedBodySize": 347214
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefGeometry.js",
+          "duration": 141,
+          "transferSize": 528074,
+          "encodedBodySize": 527774
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/LODFade.js",
+          "duration": 140.5,
+          "transferSize": 14316,
+          "encodedBodySize": 14016
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefBatch.js",
+          "duration": 140.80000001192093,
+          "transferSize": 84978,
+          "encodedBodySize": 84678
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefNoise.js",
+          "duration": 143,
+          "transferSize": 22972,
+          "encodedBodySize": 22672
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/reef/ReefMaterials.js",
+          "duration": 142.90000000596046,
+          "transferSize": 181661,
+          "encodedBodySize": 181361
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/Fish.js",
+          "duration": 155.60000002384186,
+          "transferSize": 397382,
+          "encodedBodySize": 397082
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/BirdBatch.js",
+          "duration": 148.90000000596046,
+          "transferSize": 118684,
+          "encodedBodySize": 118384
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/CritterBatch.js",
+          "duration": 149,
+          "transferSize": 78302,
+          "encodedBodySize": 78002
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Birds.js",
+          "duration": 152.10000002384186,
+          "transferSize": 231292,
+          "encodedBodySize": 230992
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Crabs.js",
+          "duration": 156.40000000596046,
+          "transferSize": 142398,
+          "encodedBodySize": 142098
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/ShadowBlobs.js",
+          "duration": 155.09999999403954,
+          "transferSize": 23282,
+          "encodedBodySize": 22982
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/SwashProbe.js",
+          "duration": 155.09999999403954,
+          "transferSize": 25488,
+          "encodedBodySize": 25188
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Shorebirds.js",
+          "duration": 157.5,
+          "transferSize": 90635,
+          "encodedBodySize": 90335
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/terrain/RockGeometry.js",
+          "duration": 158.40000000596046,
+          "transferSize": 44230,
+          "encodedBodySize": 43930
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/marine/WhaleTextures.js",
+          "duration": 156.90000000596046,
+          "transferSize": 19350,
+          "encodedBodySize": 19050
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/marine/WhaleBrain.js",
+          "duration": 157.10000002384186,
+          "transferSize": 113324,
+          "encodedBodySize": 113024
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/ocean/WhaleWater.js",
+          "duration": 149,
+          "transferSize": 41105,
+          "encodedBodySize": 40805
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/materials/SceneLighting.js",
+          "duration": 141.39999997615814,
+          "transferSize": 5547,
+          "encodedBodySize": 5247
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/DataUtils.js",
+          "duration": 131.40000000596046,
+          "transferSize": 8260,
+          "encodedBodySize": 7960
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/GTAO.js",
+          "duration": 124.90000000596046,
+          "transferSize": 83419,
+          "encodedBodySize": 83119
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/LensDroplets.js",
+          "duration": 131.89999997615814,
+          "transferSize": 36634,
+          "encodedBodySize": 36334
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/AntiAlias.js",
+          "duration": 132.19999998807907,
+          "transferSize": 85185,
+          "encodedBodySize": 84885
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/LensFlare.js",
+          "duration": 132,
+          "transferSize": 63065,
+          "encodedBodySize": 62765
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/TemporalUpscale.js",
+          "duration": 132.69999998807907,
+          "transferSize": 176067,
+          "encodedBodySize": 175767
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/post/MotionBlur.js",
+          "duration": 132.2999999821186,
+          "transferSize": 77522,
+          "encodedBodySize": 77222
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/FishTable.js",
+          "duration": 126.89999997615814,
+          "transferSize": 34459,
+          "encodedBodySize": 34159
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/Bites.js",
+          "duration": 135.09999999403954,
+          "transferSize": 19521,
+          "encodedBodySize": 19221
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/CatchMinigame.js",
+          "duration": 135.09999999403954,
+          "transferSize": 22133,
+          "encodedBodySize": 21833
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/GameState.js",
+          "duration": 135.2999999821186,
+          "transferSize": 39878,
+          "encodedBodySize": 39578
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/CatchDisplay.js",
+          "duration": 135.39999997615814,
+          "transferSize": 26573,
+          "encodedBodySize": 26273
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/FishingRod.js",
+          "duration": 140.09999999403954,
+          "transferSize": 223284,
+          "encodedBodySize": 222984
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/Gear.js",
+          "duration": 135.40000000596046,
+          "transferSize": 18758,
+          "encodedBodySize": 18458
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/Minimap.js",
+          "duration": 141.80000001192093,
+          "transferSize": 113705,
+          "encodedBodySize": 113405
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/Guide.js",
+          "duration": 142.09999999403954,
+          "transferSize": 99914,
+          "encodedBodySize": 99614
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/GameHUD.js",
+          "duration": 142,
+          "transferSize": 180664,
+          "encodedBodySize": 180364
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/Vendor.js",
+          "duration": 143.7000000178814,
+          "transferSize": 49330,
+          "encodedBodySize": 49030
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/GameMaterials.js",
+          "duration": 143.59999999403954,
+          "transferSize": 60304,
+          "encodedBodySize": 60004
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/StallKit.js",
+          "duration": 149.30000001192093,
+          "transferSize": 194828,
+          "encodedBodySize": 194528
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/BufferGeometryUtils.js",
+          "duration": 148.19999998807907,
+          "transferSize": 29361,
+          "encodedBodySize": 29061
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishProps.js",
+          "duration": 148.2999999821186,
+          "transferSize": 128457,
+          "encodedBodySize": 128157
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/InstanceLOD.js",
+          "duration": 143.90000000596046,
+          "transferSize": 73718,
+          "encodedBodySize": 73418
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/Scatter.js",
+          "duration": 147.2999999821186,
+          "transferSize": 202226,
+          "encodedBodySize": 201926
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/VegNodes.js",
+          "duration": 149.5,
+          "transferSize": 79770,
+          "encodedBodySize": 79470
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/GrassField.js",
+          "duration": 149.59999999403954,
+          "transferSize": 217222,
+          "encodedBodySize": 216922
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/Impostors.js",
+          "duration": 152.40000000596046,
+          "transferSize": 91322,
+          "encodedBodySize": 91022
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/PlantGeometry.js",
+          "duration": 152.09999999403954,
+          "transferSize": 334592,
+          "encodedBodySize": 334292
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/LeafTextures.js",
+          "duration": 156,
+          "transferSize": 39733,
+          "encodedBodySize": 39433
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/VegMaterials.js",
+          "duration": 156.09999999403954,
+          "transferSize": 267128,
+          "encodedBodySize": 266828
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/audio/soundBank.js",
+          "duration": 154.7000000178814,
+          "transferSize": 43138,
+          "encodedBodySize": 42838
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Vector2.js",
+          "duration": 152.80000001192093,
+          "transferSize": 30427,
+          "encodedBodySize": 30127
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/MathUtils.js",
+          "duration": 152.7000000178814,
+          "transferSize": 25626,
+          "encodedBodySize": 25326
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Vector3.js",
+          "duration": 153,
+          "transferSize": 59638,
+          "encodedBodySize": 59338
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Vector4.js",
+          "duration": 156.60000002384186,
+          "transferSize": 37505,
+          "encodedBodySize": 37205
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Quaternion.js",
+          "duration": 156.80000001192093,
+          "transferSize": 55957,
+          "encodedBodySize": 55657
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Euler.js",
+          "duration": 160.80000001192093,
+          "transferSize": 26297,
+          "encodedBodySize": 25997
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Box3.js",
+          "duration": 161.2000000178814,
+          "transferSize": 34824,
+          "encodedBodySize": 34524
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Matrix3.js",
+          "duration": 161,
+          "transferSize": 32127,
+          "encodedBodySize": 31827
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Color.js",
+          "duration": 161,
+          "transferSize": 47729,
+          "encodedBodySize": 47429
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Matrix4.js",
+          "duration": 161.2000000178814,
+          "transferSize": 102007,
+          "encodedBodySize": 101707
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Sphere.js",
+          "duration": 161.19999998807907,
+          "transferSize": 17821,
+          "encodedBodySize": 17521
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Plane.js",
+          "duration": 168.09999999403954,
+          "transferSize": 13346,
+          "encodedBodySize": 13046
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Spherical.js",
+          "duration": 168.40000000596046,
+          "transferSize": 6426,
+          "encodedBodySize": 6126
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Ray.js",
+          "duration": 168.2999999821186,
+          "transferSize": 25821,
+          "encodedBodySize": 25521
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Frustum.js",
+          "duration": 168.2999999821186,
+          "transferSize": 22250,
+          "encodedBodySize": 21950
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/ShapeUtils.js",
+          "duration": 168.40000000596046,
+          "transferSize": 43657,
+          "encodedBodySize": 43357
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/CatmullRomCurve3.js",
+          "duration": 168.30000001192093,
+          "transferSize": 48877,
+          "encodedBodySize": 48577
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/math/Timer.js",
+          "duration": 175.19999998807907,
+          "transferSize": 10411,
+          "encodedBodySize": 10111
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Layers.js",
+          "duration": 174.80000001192093,
+          "transferSize": 3970,
+          "encodedBodySize": 3670
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Object3D.js",
+          "duration": 175.2000000178814,
+          "transferSize": 62300,
+          "encodedBodySize": 62000
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Group.js",
+          "duration": 174.7999999821186,
+          "transferSize": 1740,
+          "encodedBodySize": 1440
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/scene/Camera.js",
+          "duration": 175.09999999403954,
+          "transferSize": 42002,
+          "encodedBodySize": 41702
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/BufferAttribute.js",
+          "duration": 174.2000000178814,
+          "transferSize": 50341,
+          "encodedBodySize": 50041
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/BufferGeometry.js",
+          "duration": 181.40000000596046,
+          "transferSize": 69284,
+          "encodedBodySize": 68984
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/PolyhedronGeometry.js",
+          "duration": 181.39999997615814,
+          "transferSize": 30414,
+          "encodedBodySize": 30114
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/TubeGeometry.js",
+          "duration": 181.39999997615814,
+          "transferSize": 13676,
+          "encodedBodySize": 13376
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/RoundedBoxGeometry.js",
+          "duration": 181.5,
+          "transferSize": 25080,
+          "encodedBodySize": 24780
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/geometry/PrimitiveGeometries.js",
+          "duration": 181.59999999403954,
+          "transferSize": 89593,
+          "encodedBodySize": 89293
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/MeshRenderer.js",
+          "duration": 180.90000000596046,
+          "transferSize": 146040,
+          "encodedBodySize": 145740
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/loaders/GLTF.js",
+          "duration": 188.80000001192093,
+          "transferSize": 53267,
+          "encodedBodySize": 52967
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/Skinning.js",
+          "duration": 189.30000001192093,
+          "transferSize": 115530,
+          "encodedBodySize": 115230
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/debris/GLB.js",
+          "duration": 123.59999999403954,
+          "transferSize": 32815,
+          "encodedBodySize": 32515
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Kit.js",
+          "duration": 105.2000000178814,
+          "transferSize": 37390,
+          "encodedBodySize": 37090
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/BirdShapes.js",
+          "duration": 109.40000000596046,
+          "transferSize": 147418,
+          "encodedBodySize": 147118
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/CritterShapes.js",
+          "duration": 109.5,
+          "transferSize": 67126,
+          "encodedBodySize": 66826
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/Flight.js",
+          "duration": 113.09999999403954,
+          "transferSize": 51286,
+          "encodedBodySize": 50986
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/wildlife/BirdPose.js",
+          "duration": 113,
+          "transferSize": 47142,
+          "encodedBodySize": 46842
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishSpecies.js",
+          "duration": 111.69999998807907,
+          "transferSize": 214200,
+          "encodedBodySize": 213900
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/CreatureGeometry.js",
+          "duration": 111.30000001192093,
+          "transferSize": 73746,
+          "encodedBodySize": 73446
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishGeometry.js",
+          "duration": 111.5,
+          "transferSize": 186517,
+          "encodedBodySize": 186217
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/fish/FishMaterial.js",
+          "duration": 115.80000001192093,
+          "transferSize": 248349,
+          "encodedBodySize": 248049
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/game/FishPortrait.js",
+          "duration": 87,
+          "transferSize": 91771,
+          "encodedBodySize": 91471
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/world/vegetation/GeoBuilder.js",
+          "duration": 69.5,
+          "transferSize": 18131,
+          "encodedBodySize": 17831
+        },
+        {
+          "name": "http://127.0.0.1:5191/src/engine/render/MeshShader.js",
+          "duration": 28.30000001192093,
+          "transferSize": 79287,
+          "encodedBodySize": 78987
+        },
+        {
+          "name": "http://127.0.0.1:5191/clouds/baseShape64.bin",
+          "duration": 5.600000023841858,
+          "transferSize": 908587,
+          "encodedBodySize": 908287
+        },
+        {
+          "name": "http://127.0.0.1:5191/clouds/blueNoise.bin",
+          "duration": 3.800000011920929,
+          "transferSize": 4396,
+          "encodedBodySize": 4096
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk.glb",
+          "duration": 3.800000011920929,
+          "transferSize": 128944,
+          "encodedBodySize": 128644
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01.glb",
+          "duration": 3.899999976158142,
+          "transferSize": 107868,
+          "encodedBodySize": 107568
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02.glb",
+          "duration": 4.5999999940395355,
+          "transferSize": 106944,
+          "encodedBodySize": 106644
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell.glb",
+          "duration": 4.0999999940395355,
+          "transferSize": 64576,
+          "encodedBodySize": 64276
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback.json",
+          "duration": 1.899999976158142,
+          "transferSize": 4406,
+          "encodedBodySize": 4106
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback.bin",
+          "duration": 34.29999998211861,
+          "transferSize": 3469716,
+          "encodedBodySize": 3469416
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk_albedo.jpg",
+          "duration": 9.5,
+          "transferSize": 769013,
+          "encodedBodySize": 768713
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk_normal.jpg",
+          "duration": 8.699999988079071,
+          "transferSize": 573541,
+          "encodedBodySize": 573241
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02_albedo.jpg",
+          "duration": 8.899999976158142,
+          "transferSize": 617573,
+          "encodedBodySize": 617273
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01_albedo.jpg",
+          "duration": 10.099999994039536,
+          "transferSize": 721003,
+          "encodedBodySize": 720703
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell_albedo.jpg",
+          "duration": 14,
+          "transferSize": 785969,
+          "encodedBodySize": 785669
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02_normal.jpg",
+          "duration": 25.19999998807907,
+          "transferSize": 737643,
+          "encodedBodySize": 737343
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01_normal.jpg",
+          "duration": 29.5,
+          "transferSize": 1023790,
+          "encodedBodySize": 1023490
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_02_arm.jpg",
+          "duration": 24.80000001192093,
+          "transferSize": 501650,
+          "encodedBodySize": 501350
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell_normal.jpg",
+          "duration": 25.19999998807907,
+          "transferSize": 582508,
+          "encodedBodySize": 582208
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_trunk_arm.jpg",
+          "duration": 21.69999998807907,
+          "transferSize": 514514,
+          "encodedBodySize": 514214
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/dead_quiver_branch_01_arm.jpg",
+          "duration": 33.099999994039536,
+          "transferSize": 595328,
+          "encodedBodySize": 595028
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/debris/lambis_shell_arm.jpg",
+          "duration": 34.69999998807907,
+          "transferSize": 567763,
+          "encodedBodySize": 567463
+        },
+        {
+          "name": "http://127.0.0.1:5191/favicon.ico",
+          "duration": 29,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback_albedo.png",
+          "duration": 19.19999998807907,
+          "transferSize": 4289986,
+          "encodedBodySize": 4289686
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/whale/humpback_height.png",
+          "duration": 155.5,
+          "transferSize": 12896317,
+          "encodedBodySize": 12896017
+        },
+        {
+          "name": "http://127.0.0.1:5191/textures/smaa/area.png",
+          "duration": 2.0999999940395355,
+          "transferSize": 33503,
+          "encodedBodySize": 33203
+        },
+        {
+          "name": "http://127.0.0.1:5191/textures/smaa/search.png",
+          "duration": 1.7999999821186066,
+          "transferSize": 413,
+          "encodedBodySize": 113
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/props.json",
+          "duration": 2.0999999940395355,
+          "transferSize": 3934,
+          "encodedBodySize": 3634
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/characters/joe.glb",
+          "duration": 104.10000002384186,
+          "transferSize": 4743504,
+          "encodedBodySize": 4743204
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/characters/marta.glb",
+          "duration": 49.900000005960464,
+          "transferSize": 5507376,
+          "encodedBodySize": 5507076
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/props.bin",
+          "duration": 15.300000011920929,
+          "transferSize": 1988832,
+          "encodedBodySize": 1988532
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/s_weathered_brown_planks_a.jpg",
+          "duration": 5.699999988079071,
+          "transferSize": 235338,
+          "encodedBodySize": 235038
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/s_weathered_planks_a.jpg",
+          "duration": 5.299999982118607,
+          "transferSize": 166812,
+          "encodedBodySize": 166512
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/s_worn_corrugated_iron_a.jpg",
+          "duration": 9.300000011920929,
+          "transferSize": 278131,
+          "encodedBodySize": 277831
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/s_weathered_peeling_timber_a.jpg",
+          "duration": 9.400000005960464,
+          "transferSize": 322480,
+          "encodedBodySize": 322180
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/s_weathered_brown_planks_n.jpg",
+          "duration": 9,
+          "transferSize": 247256,
+          "encodedBodySize": 246956
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/s_weathered_planks_n.jpg",
+          "duration": 9.300000011920929,
+          "transferSize": 206885,
+          "encodedBodySize": 206585
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/s_worn_corrugated_iron_n.jpg",
+          "duration": 21.900000005960464,
+          "transferSize": 413588,
+          "encodedBodySize": 413288
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/s_weathered_peeling_timber_n.jpg",
+          "duration": 17.299999982118607,
+          "transferSize": 220554,
+          "encodedBodySize": 220254
+        },
+        {
+          "name": "http://127.0.0.1:5191/models/props/s_weathered_brown_planks_r.jpg",
+          "duration": 21,
+          "transferSize": 224389,
+          "encodedBodySize": 224089
+        }
+      ]
+    }
+  },
+  "console": [
+    {
+      "type": "warning",
+      "text": "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127",
+      "location": {
+        "url": "http://127.0.0.1:5191/src/engine/gpu/GPU.js",
+        "line": 30,
+        "column": 0,
+        "lineNumber": 30,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "ShoreWaves.buildDirTexture: no shore field data on the terrain; using terrainShoreSample instead",
+      "location": {
+        "url": "http://127.0.0.1:5191/@vite/client",
+        "line": 298,
+        "column": 3,
+        "lineNumber": 298,
+        "columnNumber": 3
+      }
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "location": {
+        "url": "http://127.0.0.1:5191/favicon.ico",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "requestsFailed": [],
+  "httpErrors": [],
+  "browserExecutable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "playwrightModule": "E:\\game\\3D布娃娃物理喜剧\\node_modules\\playwright-core\\index.mjs",
+  "profile": "E:\\test\\3Dmodel\\output\\crescent-review\\stage1-capture-reset\\browser-profile-1790756773955",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.58",
+    "revision": "@a654841425914cbb703a2931e07b70a83aedbafd",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.11"
+  },
+  "gpu": {
+    "vendor": "nvidia",
+    "architecture": "ampere",
+    "device": "",
+    "description": "",
+    "isFallbackAdapter": false,
+    "timestampQuery": true,
+    "format": "bgra8unorm",
+    "features": [
+      "float32-filterable",
+      "timestamp-query",
+      "rg11b10ufloat-renderable",
+      "float32-blendable",
+      "shader-f16",
+      "clip-distances"
+    ]
+  },
+  "screenshots": [
+    {
+      "name": "stage1-capture-reset-beach.png",
+      "width": 1280,
+      "height": 720,
+      "format": "bgra8unorm"
+    },
+    {
+      "name": "stage1-capture-reset-aerial.png",
+      "width": 1280,
+      "height": 720,
+      "format": "bgra8unorm"
+    },
+    {
+      "name": "stage1-capture-reset-village.png",
+      "width": 1280,
+      "height": 720,
+      "format": "bgra8unorm"
+    },
+    {
+      "name": "stage1-capture-reset-pier.png",
+      "width": 1280,
+      "height": 720,
+      "format": "bgra8unorm"
+    }
+  ],
+  "success": true
+}
